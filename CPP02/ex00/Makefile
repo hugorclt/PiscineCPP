@@ -6,7 +6,7 @@
 #    By: hrecolet <hrecolet@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/03/02 20:59:38 by hrecolet          #+#    #+#              #
-#    Updated: 2022/06/11 11:02:50 by hrecolet         ###   ########.fr        #
+#    Updated: 2022/06/11 12:26:25 by hrecolet         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -28,7 +28,7 @@ all			:	$(NAME)
 
 
 $(NAME)		:	$(OBJ) $(INCL)
-				$(CC) $(CFLAGS) $(OBJ) $(INCL) -o $(NAME) 
+				$(CC) $(CFLAGS) $(OBJ) -o $(NAME) 
 		
 clean		:	
 				$(RM) $(OBJ)

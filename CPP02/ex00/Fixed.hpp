@@ -6,7 +6,7 @@
 /*   By: hrecolet <hrecolet@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/11 10:16:40 by hrecolet          #+#    #+#             */
-/*   Updated: 2022/06/11 11:02:31 by hrecolet         ###   ########.fr       */
+/*   Updated: 2022/06/11 12:34:05 by hrecolet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,5 +25,5 @@ class Fixed
 		~Fixed(void);
 		void	operator=(const Fixed &to_assign);
 		void	setRawBits(const int raw);
-		int		getRawBits(void);
+		int		getRawBits(void) const;
 };
