@@ -6,7 +6,7 @@
 /*   By: hrecolet <hrecolet@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/02 21:13:58 by hrecolet          #+#    #+#             */
-/*   Updated: 2022/03/03 04:52:08 by hrecolet         ###   ########.fr       */
+/*   Updated: 2022/06/11 12:17:42 by hrecolet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,7 @@ int	main(int ac, char **av)
 	
 	while(1)
 	{
+		std::cout << "Enter a command (ADD, SEARCH or EXIT)" << std::endl;
 		std::cin >> cmd;
 		if (cmd == "ADD")
 		{
@@ -62,7 +63,7 @@ int	main(int ac, char **av)
 			{
 				std::cout << "Contact index :" << std::endl;
 				std::cin >> index;
-				if (index < phonebook.getIndex() && index <= 8 && index >= 0) {
+				if ((index < phonebook.getIndex() || phonebook.getFull() == 1) && index <= 8 && index >= 0) {
 					std::cout << "Firstname:" + phonebook.getContact(index).getFirstName() << std::endl;
 					std::cout << "LastName:" + phonebook.getContact(index).getLastName() << std::endl;
 					std::cout << "Nickname:" + phonebook.getContact(index).getNickname() << std::endl;
@@ -71,11 +72,14 @@ int	main(int ac, char **av)
 					break;
 				}
 				else {
-					std::cout << "Index Error : " << std::endl;
+					std::cout << "Index Error" << std::endl;
+					break ;
 				}
 			}
 		}
 		else if (cmd == "EXIT")
+			return (0);
+		else if (cmd == "")
 			return (0);
 	}
 	return (0);

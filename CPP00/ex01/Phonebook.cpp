@@ -6,7 +6,7 @@
 /*   By: hrecolet <hrecolet@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/02 21:15:01 by hrecolet          #+#    #+#             */
-/*   Updated: 2022/03/03 05:23:26 by hrecolet         ###   ########.fr       */
+/*   Updated: 2022/06/11 12:11:54 by hrecolet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,19 @@ Contact	Phonebook::getContact(int index)
 {
 	return this->contact[index];
 }
+
+int	Phonebook::getFull(void)
+{
+	return (this->is_full);
+}
+
+std::string	Phonebook::truncate(std::string str, size_t width)
+{
+	if (str.length() > width)
+		return (str.substr(0, width - 1) + ".");
+	else
+		return (str);
+};
 
 int		Phonebook::getIndex()
 {
@@ -62,7 +75,7 @@ void	Phonebook::printContact()
     		<< std::left << std::setw(10) << std::setfill(' ') << i << "|"
     		<< std::left << std::setw(10) << std::setfill(' ') << this->truncate(this->contact[i].getFirstName(), 10) << "|"
     		<< std::left << std::setw(10) << std::setfill(' ') << this->truncate(this->contact[i].getLastName(), 10) << "|"
-			<< std::left << std::setw(10) << std::setfill(' ') << this->truncate(this->contact[i].getNickname(), 10) << std::endl;
+			<< std::left << std::setw(10) << std::setfill(' ') << this->truncate(this->contact[i].getNickname(), 10);
 		std::cout << std::endl;
 	}
 }
