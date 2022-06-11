@@ -6,7 +6,7 @@
 /*   By: hrecolet <hrecolet@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/11 10:16:37 by hrecolet          #+#    #+#             */
-/*   Updated: 2022/06/11 12:55:23 by hrecolet         ###   ########.fr       */
+/*   Updated: 2022/06/11 12:34:10 by hrecolet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,22 +33,6 @@ void	Fixed::operator=(const Fixed &to_assign)
 {
 	std::cout << "Copy assignment operator called" << std::endl;
 	this->value = to_assign.getRawBits();
-}
-
-float	Fixed::operator<(void)
-{
-	//yay
-	return ()
-}
-
-int	Fixed::toInt(void)
-{
-	return (this->value);
-}
-
-float	Fixed::toFloat(void)
-{
-	//yay
 }
 
 int	Fixed::getRawBits(void) const
