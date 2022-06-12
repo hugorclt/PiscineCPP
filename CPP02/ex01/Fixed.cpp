@@ -6,7 +6,7 @@
 /*   By: hrecolet <hrecolet@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/11 10:16:37 by hrecolet          #+#    #+#             */
-/*   Updated: 2022/06/12 18:48:44 by hrecolet         ###   ########.fr       */
+/*   Updated: 2022/06/12 19:14:09 by hrecolet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,14 +26,14 @@ Fixed::Fixed(const Fixed &value)
 
 Fixed::Fixed(const int &value)
 {
-	std::cout << "Copy constructor called" << std::endl;
-	this->value = value;
+	std::cout << "Int constructor called" << std::endl;
+	this->value = value << this->bits;
 }
 
 Fixed::Fixed(const float &value)
 {
-	std::cout << "Copy constructor called" << std::endl;
-	this->value = value;
+	std::cout << "Float constructor called" << std::endl;
+	this->value = roundf(value * (1 << this->bits));
 }
 
 Fixed::~Fixed(void)
@@ -47,7 +47,7 @@ void	Fixed::operator=(const Fixed &to_assign)
 	this->value = to_assign.getRawBits();
 }
 
-std::ostream	&Fixed::operator<<(std::ostream &stream, const Fixed &to_output)
+std::ostream	&operator<<(std::ostream &stream, const Fixed &to_output)
 {
 	stream << to_output.toFloat();
 	return (stream);
@@ -55,12 +55,12 @@ std::ostream	&Fixed::operator<<(std::ostream &stream, const Fixed &to_output)
 
 int	Fixed::toInt(void) const
 {
-	return (this->value);
+	return (this->value >> this->bits);
 }
 
 float	Fixed::toFloat(void) const
 {
-	//yay
+	return ((float)this->value / (float)(1 << this->bits));
 }
 
 int	Fixed::getRawBits(void) const

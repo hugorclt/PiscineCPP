@@ -6,12 +6,13 @@
 /*   By: hrecolet <hrecolet@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/11 10:16:40 by hrecolet          #+#    #+#             */
-/*   Updated: 2022/06/12 18:50:29 by hrecolet         ###   ########.fr       */
+/*   Updated: 2022/06/12 19:13:11 by hrecolet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
 #include <iostream>
+#include <cmath>
 
 class Fixed
 {
@@ -30,5 +31,6 @@ class Fixed
 		int				getRawBits(void) const;
 		int				toInt(void) const;
 		float			toFloat(void) const;
-		std::ostream	&operator<<(std::ostream &stream, const Fixed &to_output);
 };
+
+std::ostream	&operator<<(std::ostream &stream, const Fixed &to_output);
