@@ -6,7 +6,7 @@
 /*   By: hrecolet <hrecolet@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/02 21:13:58 by hrecolet          #+#    #+#             */
-/*   Updated: 2022/06/11 12:17:42 by hrecolet         ###   ########.fr       */
+/*   Updated: 2022/06/12 18:55:46 by hrecolet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 #include <string>
 #include <iomanip>
 
-int	main(int ac, char **av)
+int	main()
 {
 	std::string cmd;
 	Phonebook	phonebook;

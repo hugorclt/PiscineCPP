@@ -6,7 +6,7 @@
 #    By: hrecolet <hrecolet@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/03/02 20:59:38 by hrecolet          #+#    #+#              #
-#    Updated: 2022/06/11 12:23:52 by hrecolet         ###   ########.fr        #
+#    Updated: 2022/06/12 18:55:09 by hrecolet         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,6 +21,9 @@ CFLAGS		=	-Wall -Werror -Wextra
 RM			=	rm -f
 
 NAME		=	myawesomephonebook
+
+%.o : %.cpp
+	$(CC) $(CFLAGS) -o $@ -c $< 
 
 OBJ			=	$(SRCS:.cpp=.o)
 

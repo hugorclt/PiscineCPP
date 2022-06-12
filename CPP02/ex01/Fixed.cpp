@@ -6,7 +6,7 @@
 /*   By: hrecolet <hrecolet@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/11 10:16:37 by hrecolet          #+#    #+#             */
-/*   Updated: 2022/06/11 12:34:10 by hrecolet         ###   ########.fr       */
+/*   Updated: 2022/06/12 18:48:44 by hrecolet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,10 +18,22 @@ Fixed::Fixed(void)
 	this->value = 0;
 }
 
-Fixed::Fixed(const Fixed& value)
+Fixed::Fixed(const Fixed &value)
 {
 	std::cout << "Copy constructor called" << std::endl;
 	this->value = value.getRawBits();
+}
+
+Fixed::Fixed(const int &value)
+{
+	std::cout << "Copy constructor called" << std::endl;
+	this->value = value;
+}
+
+Fixed::Fixed(const float &value)
+{
+	std::cout << "Copy constructor called" << std::endl;
+	this->value = value;
 }
 
 Fixed::~Fixed(void)
@@ -33,6 +45,22 @@ void	Fixed::operator=(const Fixed &to_assign)
 {
 	std::cout << "Copy assignment operator called" << std::endl;
 	this->value = to_assign.getRawBits();
+}
+
+std::ostream	&Fixed::operator<<(std::ostream &stream, const Fixed &to_output)
+{
+	stream << to_output.toFloat();
+	return (stream);
+}
+
+int	Fixed::toInt(void) const
+{
+	return (this->value);
+}
+
+float	Fixed::toFloat(void) const
+{
+	//yay
 }
 
 int	Fixed::getRawBits(void) const
