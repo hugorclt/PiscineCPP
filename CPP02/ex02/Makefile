@@ -6,13 +6,13 @@
 #    By: hrecolet <hrecolet@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/03/02 20:59:38 by hrecolet          #+#    #+#              #
-#    Updated: 2022/06/13 12:40:36 by hrecolet         ###   ########.fr        #
+#    Updated: 2022/06/12 19:12:53 by hrecolet         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRCS		=	main.cpp Phonebook.cpp Contact.cpp
+SRCS		=	main.cpp Fixed.cpp
 
-INCL		=	Contact.hpp Phonebook.hpp
+INCL		=	Fixed.hpp
 
 CC			=	c++
 
@@ -20,16 +20,16 @@ CFLAGS		=	-Wall -Werror -Wextra -std=c++98
 
 RM			=	rm -f
 
-NAME		=	myawesomephonebook
-
-%.o : %.cpp
-	$(CC) $(CFLAGS) -o $@ -c $< 
+NAME		=	fixed
 
 OBJ			=	$(SRCS:.cpp=.o)
 
 all			:	$(NAME) 
 
-$(NAME)		:	$(OBJ) Contact.hpp Phonebook.hpp
+%.o : %.cpp
+	$(CC) $(CFLAGS) -o $@ -c $< 
+
+$(NAME)		:	$(OBJ) $(INCL)
 				$(CC) $(CFLAGS) $(OBJ) -o $(NAME) 
 		
 clean		:	

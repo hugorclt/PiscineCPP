@@ -6,7 +6,7 @@
 #    By: hrecolet <hrecolet@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/03/02 20:59:38 by hrecolet          #+#    #+#              #
-#    Updated: 2022/06/12 19:12:53 by hrecolet         ###   ########.fr        #
+#    Updated: 2022/06/13 10:51:58 by hrecolet         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,7 +21,6 @@ CFLAGS		=	-Wall -Werror -Wextra -std=c++98
 RM			=	rm -f
 
 NAME		=	fixed
-
 OBJ			=	$(SRCS:.cpp=.o)
 
 all			:	$(NAME) 

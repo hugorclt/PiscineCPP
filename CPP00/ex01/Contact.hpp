@@ -6,7 +6,7 @@
 /*   By: hrecolet <hrecolet@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/02 21:16:31 by hrecolet          #+#    #+#             */
-/*   Updated: 2022/03/03 04:20:23 by hrecolet         ###   ########.fr       */
+/*   Updated: 2022/06/13 12:51:04 by hrecolet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,11 @@
 class Contact
 {
 	public:
+		//Constructor, destructor
 		Contact(void);
 		~Contact(void);
+
+		//Accessor
 		void		addFirstName(std::string);
 		void		addlastName(std::string);
 		void		addNickname(std::string);
@@ -32,6 +35,7 @@ class Contact
 		std::string	getDarkestSecret(void);
 
 	private:
+		//Attributes
 		std::string firstName;
 		std::string lastName;
 		std::string nickname;

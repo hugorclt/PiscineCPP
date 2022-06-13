@@ -6,7 +6,7 @@
 /*   By: hrecolet <hrecolet@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/02 21:15:01 by hrecolet          #+#    #+#             */
-/*   Updated: 2022/06/11 12:11:54 by hrecolet         ###   ########.fr       */
+/*   Updated: 2022/06/13 12:58:00 by hrecolet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,7 +72,7 @@ void	Phonebook::printContact()
 	for (int i = 0; i < j; i++)
 	{
 		std::cout
-    		<< std::left << std::setw(10) << std::setfill(' ') << i << "|"
+    		<< std::left << std::setw(10) << std::setfill(' ') << i + 1 << "|"
     		<< std::left << std::setw(10) << std::setfill(' ') << this->truncate(this->contact[i].getFirstName(), 10) << "|"
     		<< std::left << std::setw(10) << std::setfill(' ') << this->truncate(this->contact[i].getLastName(), 10) << "|"
 			<< std::left << std::setw(10) << std::setfill(' ') << this->truncate(this->contact[i].getNickname(), 10);
