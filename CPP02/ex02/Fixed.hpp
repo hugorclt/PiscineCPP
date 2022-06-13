@@ -6,7 +6,7 @@
 /*   By: hrecolet <hrecolet@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/11 10:16:40 by hrecolet          #+#    #+#             */
-/*   Updated: 2022/06/13 11:54:22 by hrecolet         ###   ########.fr       */
+/*   Updated: 2022/06/13 15:18:44 by hrecolet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,18 +35,18 @@ class Fixed
 		Fixed				&operator=(const Fixed &to_assign);
 		
 		//Comparison operator
-		bool				operator==(const Fixed &othInstance);
-		bool				operator<(const Fixed &othInstance);
-		bool				operator>(const Fixed &othInstance);
-		bool				operator<=(const Fixed &othInstance);
-		bool				operator>=(const Fixed &othInstance);
-		bool				operator!=(const Fixed &othInstance);
+		bool				operator==(const Fixed &othInstance) const;
+		bool				operator<(const Fixed &othInstance) const;
+		bool				operator>(const Fixed &othInstance) const;
+		bool				operator<=(const Fixed &othInstance) const;
+		bool				operator>=(const Fixed &othInstance) const;
+		bool				operator!=(const Fixed &othInstance) const;
 		
 		//Mathematics operator
-		Fixed				operator+(const Fixed &othInstance);
-		Fixed				operator-(const Fixed &othInstance);
+		Fixed				operator+(const Fixed &othInstance) const;
+		Fixed				operator-(const Fixed &othInstance) const;
 		Fixed				operator*(const Fixed &othInstance);
-		Fixed				operator/(const Fixed &othInstance);
+		Fixed				operator/(const Fixed &othInstance) const;
 		
 		//Pre-incrementation operator
 		Fixed				operator++(void);
@@ -61,10 +61,10 @@ class Fixed
 		int					getRawBits(void) const;
 		int					toInt(void) const;
 		float				toFloat(void) const;
-		static Fixed		min(Fixed &nb1, Fixed &nb2);
-		static Fixed		max(Fixed &nb1, Fixed &nb2);
 		static const Fixed	min(const Fixed &nb1, const Fixed &nb2);
 		static const Fixed	max(const Fixed &nb1, const Fixed &nb2);
+		static Fixed		min(Fixed &nb1, Fixed &nb2);
+		static Fixed		max(Fixed &nb1, Fixed &nb2);
 };
 
 std::ostream				&operator<<(std::ostream &stream, const Fixed &to_output);
