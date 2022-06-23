@@ -6,7 +6,7 @@
 /*   By: hrecolet <hrecolet@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/11 08:54:54 by hrecolet          #+#    #+#             */
-/*   Updated: 2022/06/11 09:29:43 by hrecolet         ###   ########.fr       */
+/*   Updated: 2022/06/23 09:54:54 by hrecolet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,10 +40,14 @@ void	Harl::complain(std::string level)
 		&Harl::warning,
 		&Harl::error
 	};
-	std::string	c_level[4] = {"debug", "info", "warning", "error"};
+	std::string	c_level[4] = {"DEBUG", "INFO", "WARNING", "ERROR"};
 	for (int i = 0; i < 4; i++)
 	{
 		if (level == c_level[i])
+		{
 			(this->*select[i])();
+			return ;
+		}
 	}
+	std::cout << "hum... what did you say ??" << std::endl;
 }

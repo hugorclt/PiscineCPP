@@ -6,7 +6,7 @@
 #    By: hrecolet <hrecolet@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/03/02 20:59:38 by hrecolet          #+#    #+#              #
-#    Updated: 2022/06/11 08:54:19 by hrecolet         ###   ########.fr        #
+#    Updated: 2022/06/23 09:46:24 by hrecolet         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -26,6 +26,8 @@ OBJ			=	$(SRCS:.cpp=.o)
 
 all			:	$(NAME) 
 
+%.o : %.cpp
+	$(CC) $(CFLAGS) -o $@ -c $< 
 
 $(NAME)		:	$(OBJ) 
 				$(CC) $(CFLAGS) $(OBJ) -o $(NAME) 

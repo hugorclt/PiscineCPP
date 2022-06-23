@@ -5,15 +5,15 @@
 
 int	main()
 {
-	std::string var = "HI THIS IS BRAIN";
-	std::string *varPTR = &var;
-	std::string &varREF = var;
+	std::string string = "HI THIS IS BRAIN";
+	std::string *stringPTR = &string;
+	std::string &stringREF = string;
 
-	std::cout << "String address:" << &var << std::endl;
-	std::cout << "StringPTR address:" << varPTR << std::endl;
-	std::cout << "StringRef address:" << &varREF << std::endl;
+	std::cout << "String address:" << &string << std::endl;
+	std::cout << "StringPTR address:" << stringPTR << std::endl;
+	std::cout << "StringRef address:" << &stringREF << std::endl;
 	std::cout << std::endl;
-	std::cout << "String:" << var << std::endl;
-	std::cout << "StringPTR:" << *varPTR << std::endl;
-	std::cout << "StringRef:" << varREF << std::endl;
+	std::cout << "String:" << string << std::endl;
+	std::cout << "StringPTR:" << *stringPTR << std::endl;
+	std::cout << "StringRef:" << stringREF << std::endl;
 }

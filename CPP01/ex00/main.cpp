@@ -5,21 +5,21 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: hrecolet <hrecolet@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/06/11 09:24:48 by hrecolet          #+#    #+#             */
-/*   Updated: 2022/06/23 09:54:02 by hrecolet         ###   ########.fr       */
+/*   Created: 2022/06/23 09:18:13 by hrecolet          #+#    #+#             */
+/*   Updated: 2022/06/23 09:33:59 by hrecolet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Harl.hpp"
+#include "Zombie.hpp"
 
 int	main(void)
 {
-	Harl		harl;
-	std::string	str;
+	//Create two Zombie, Phil on the heap, with the keyword new inside newZombie.cpp
+	//Olivier on the stack inside randomChump.cpp
+	Zombie *z1 = newZombie("Phil");
+	randomChump("Olivier");
 	
-	std::cout << "Use : DEBUG, INFO, WARNING or ERROR, to use Harl" << std::endl;
-	if (!getline(std::cin, str))
-		return (1);
-	harl.complain(str);
-	return (0);
+	z1->announce();
+
+	delete z1;
 }
