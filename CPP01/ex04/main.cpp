@@ -47,15 +47,17 @@ int	main(int ac, char **av)
 		}
 		while (std::getline(input, line))
 		{
+			int past_index = -1;
 			while (1)
 			{
-				std::size_t	index_found = line.find(to_search);
-				if (index_found != std::string::npos)
+				int	index_found = line.find(to_search);
+				if (index_found != int(std::string::npos) && index_found != past_index)
 				{
 					tmp = line.substr(0, index_found);
 					tmp = tmp + to_replace;
 					tmp2 = line.substr(index_found + to_search.length(), line.length());
 					line = tmp + tmp2;
+					past_index = index_found;
 				}
 				else
 					break;
