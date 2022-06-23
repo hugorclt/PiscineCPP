@@ -6,7 +6,7 @@
 /*   By: hrecolet <hrecolet@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/23 10:41:16 by hrecolet          #+#    #+#             */
-/*   Updated: 2022/06/23 10:59:39 by hrecolet         ###   ########.fr       */
+/*   Updated: 2022/06/23 13:41:26 by hrecolet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,3 +36,4 @@ bool	bsp(Point const a, Point const b, Point const c, Point const point)
 
 	return (A == A1 + A2 + A3);
 }
+
