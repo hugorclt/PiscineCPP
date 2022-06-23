@@ -6,7 +6,7 @@
 /*   By: hrecolet <hrecolet@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/23 10:36:55 by hrecolet          #+#    #+#             */
-/*   Updated: 2022/06/23 14:14:35 by hrecolet         ###   ########.fr       */
+/*   Updated: 2022/06/23 15:28:22 by hrecolet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,13 +16,12 @@
 //Constructor && Destructor
 
 Point::Point(void)
-{	
+{
 }
 
 Point::Point(const Point &pts)
 {
-	this->x.setRawBits(pts->x);
-	this->y.setRawBits(pts->y);
+	*this = pts;
 }
 
 Point::Point(const float x, const float y)
