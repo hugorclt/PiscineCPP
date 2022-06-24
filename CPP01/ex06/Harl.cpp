@@ -6,11 +6,18 @@
 /*   By: hrecolet <hrecolet@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/11 08:54:54 by hrecolet          #+#    #+#             */
-/*   Updated: 2022/06/23 09:53:20 by hrecolet         ###   ########.fr       */
+/*   Updated: 2022/06/24 10:24:44 by hrecolet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Harl.hpp"
+
+std::string Harl::complainLevel[4] = {
+	("DEBUG"),
+	("INFO"),
+	("WARNING"),
+	("ERROR")
+};
 
 void	Harl::debug(void)
 {
@@ -34,24 +41,24 @@ void	Harl::error(void)
 
 void	Harl::complain(std::string level)
 {
-	void	(Harl::*select[4])(void) = {
-		&Harl::debug,
-		&Harl::info,
-		&Harl::warning,
-		&Harl::error
-	};
-	std::string	c_level[4] = {"DEBUG", "INFO", "WARNING", "ERROR"};
-	for (int i = 0; i < 4; i++)
+	int	lvl = 0;
+
+	while (complainLevel[lvl] != level && lvl < 4)
+		lvl++;
+	switch (lvl)
 	{
-		if (level == c_level[i])
+		case (0):
+			this->debug();
+		case (1):
+			this->info();
+		case (2):
+			this->warning();
+		case (3):
 		{
-			while (i < 4)
-			{
-				(this->*select[i])();
-				i++;
-			}
-			return ;
+			this->error();
+			break ;
 		}
+		default :
+			std::cout << "Hum... what did you say ??" << std::endl;
 	}
-	std::cout << "Hum... what did you say ??" << std::endl;
 }

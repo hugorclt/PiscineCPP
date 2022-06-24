@@ -6,7 +6,7 @@
 /*   By: hrecolet <hrecolet@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/11 08:55:06 by hrecolet          #+#    #+#             */
-/*   Updated: 2022/06/11 09:04:33 by hrecolet         ###   ########.fr       */
+/*   Updated: 2022/06/24 10:17:29 by hrecolet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,8 @@ class Harl
 		void	debug(void);
 		void	info(void);
 		void	warning(void);
-		void	error(void);	
+		void	error(void);
+		static std::string	complainLevel[4];
 	
 
 	public:
