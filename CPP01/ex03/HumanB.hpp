@@ -6,7 +6,7 @@
 /*   By: hrecolet <hrecolet@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/11 08:57:33 by hrecolet          #+#    #+#             */
-/*   Updated: 2022/06/11 08:57:35 by hrecolet         ###   ########.fr       */
+/*   Updated: 2022/06/24 09:30:10 by hrecolet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ private:
 
 public:
 	HumanB(std::string name);
-	//~HumanB();
+	~HumanB();
 	void	setWeapon(Weapon &weapon);
 	void	attack();
 };
