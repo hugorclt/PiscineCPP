@@ -26,7 +26,7 @@ int	main(int ac, char **av)
 		std::ifstream	input(av[1]);
 		std::string		to_search(av[2]);
 		std::string		to_replace(av[3]);
-		std::string		name = av[1];
+		std::string		name(av[1]);
 		std::string		tmp;
 		std::string		tmp2;
 
@@ -36,14 +36,13 @@ int	main(int ac, char **av)
 			return (std::cerr << "Couldn't open the file " << av[1] << std::endl, 0);
 		std::string		line;
 		std::ofstream	output(name.c_str());
-		if (to_search == to_replace)
+		if (to_search == to_replace || to_search.empty())
 		{
 			while (std::getline(input, line))
-			{
 				output << line << std::endl;
-				output.close();
-				return (0);
-			}
+			output.close();
+			std::cout << "all good ! check : " << name << std::endl;
+			return (0);
 		}
 		while (std::getline(input, line))
 		{
