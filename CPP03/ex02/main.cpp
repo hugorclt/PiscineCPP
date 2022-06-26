@@ -6,7 +6,7 @@
 /*   By: hrecolet <hrecolet@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/14 11:22:18 by hrecolet          #+#    #+#             */
-/*   Updated: 2022/06/25 13:44:33 by hrecolet         ###   ########.fr       */
+/*   Updated: 2022/06/26 14:50:43 by hrecolet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,9 +24,9 @@ int	main(void)
 	std::cout << std::endl;
 	ScavTrap yay2;
 	std::cout << std::endl;
-	FlagTrap bill("Bill");
+	FragTrap bill("Bill");
 	std::cout << std::endl;
-	FlagTrap yay3;
+	FragTrap yay3;
 	std::cout << std::endl;
 	std::cout << std::endl;
 	std::cout << "FlagTrap" << std::endl;

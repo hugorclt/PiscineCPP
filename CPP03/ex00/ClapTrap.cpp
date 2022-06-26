@@ -6,11 +6,19 @@
 /*   By: hrecolet <hrecolet@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/14 10:54:07 by hrecolet          #+#    #+#             */
-/*   Updated: 2022/06/24 20:58:30 by hrecolet         ###   ########.fr       */
+/*   Updated: 2022/06/26 15:09:14 by hrecolet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ClapTrap.hpp"
+
+ClapTrap::ClapTrap()
+{
+	std::cout << "ClapTrap is born" << std::endl;
+	this->energy = 10;
+	this->health = 10;
+	this->damage = 0;
+}
 
 ClapTrap::ClapTrap(std::string name)
 {
@@ -30,6 +38,15 @@ ClapTrap::ClapTrap(const ClapTrap &inst)
 ClapTrap::~ClapTrap(void)
 {
 	std::cout << this->name << " was destroyed by the angry compilo" << std::endl;
+}
+
+ClapTrap	&ClapTrap::operator=(const ClapTrap &to_assign)
+{
+	this->name = to_assign.name;
+	this->health = to_assign.health;
+	this->energy = to_assign.energy;
+	this->damage = to_assign.damage;
+	return (*this);
 }
 
 void	ClapTrap::attack(const std::string &target)

@@ -6,7 +6,7 @@
 /*   By: hrecolet <hrecolet@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/25 12:48:07 by hrecolet          #+#    #+#             */
-/*   Updated: 2022/06/25 13:22:39 by hrecolet         ###   ########.fr       */
+/*   Updated: 2022/06/26 15:22:59 by hrecolet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,10 +40,28 @@ ScavTrap::~ScavTrap()
 	std::cout << this->name << " ScavTrap was destroyed by the angry compilo" << std::endl;
 }
 
+ScavTrap	&ScavTrap::operator=(const ScavTrap &to_assign)
+{
+	this->name = to_assign.name;
+	this->health = to_assign.health;
+	this->energy = to_assign.energy;
+	this->damage = to_assign.damage;
+	return (*this);
+}
+
 //Function
 
 void	ScavTrap::guardGate(void)
 {
 	if (this->energy > 0 && this->health > 0)
 		std::cout << this->name << " : Gate Keeper mode activated" << std::endl;
+}
+
+void	ScavTrap::attack(const std::string &target)
+{
+	if (this->health > 0 && this->energy > 0)
+	{
+		this->energy--;
+		std::cout << this->name << " : attacks " << target << ", causing " << this->damage << " points of damage!" << std::endl;
+	}
 }

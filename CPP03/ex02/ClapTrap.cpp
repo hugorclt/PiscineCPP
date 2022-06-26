@@ -6,7 +6,7 @@
 /*   By: hrecolet <hrecolet@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/14 10:54:07 by hrecolet          #+#    #+#             */
-/*   Updated: 2022/06/25 13:23:23 by hrecolet         ###   ########.fr       */
+/*   Updated: 2022/06/26 15:10:47 by hrecolet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,6 +38,15 @@ ClapTrap::ClapTrap(const ClapTrap &inst)
 ClapTrap::~ClapTrap(void)
 {
 	std::cout << this->name << " Claptrap was destroyed by the angry compilo" << std::endl;
+}
+
+ClapTrap	&ClapTrap::operator=(const ClapTrap &to_assign)
+{
+	this->name = to_assign.name;
+	this->health = to_assign.health;
+	this->energy = to_assign.energy;
+	this->damage = to_assign.damage;
+	return (*this);
 }
 
 void	ClapTrap::attack(const std::string &target)
