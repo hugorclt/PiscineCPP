@@ -6,7 +6,7 @@
 /*   By: hrecolet <hrecolet@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/23 10:41:16 by hrecolet          #+#    #+#             */
-/*   Updated: 2022/06/23 13:41:26 by hrecolet         ###   ########.fr       */
+/*   Updated: 2022/06/26 11:34:32 by hrecolet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,12 +19,16 @@ Fixed	abs(Fixed value)
 	
 	if (value < 0)
 		res = value * (-1);
+	else
+		res = value;
 	return (res);
 }
 
 Fixed	area(Point const a, Point const b, Point const c)
 {
-	return (abs((a.x * (b.x - c.y) + b.x * (c.y - a.y) + c.x * (a.y - b.y)) / 2.0));
+	Fixed two(2);
+	
+	return (abs((a.getX() * (b.getY() - c.getY()) + b.getX() * (c.getY() - a.getY()) + c.getX() * (a.getY() - b.getY())) / two));
 }
 
 bool	bsp(Point const a, Point const b, Point const c, Point const point)

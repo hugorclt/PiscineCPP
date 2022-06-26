@@ -6,7 +6,7 @@
 /*   By: hrecolet <hrecolet@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/23 10:36:55 by hrecolet          #+#    #+#             */
-/*   Updated: 2022/06/23 15:28:22 by hrecolet         ###   ########.fr       */
+/*   Updated: 2022/06/26 11:14:03 by hrecolet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,15 +19,12 @@ Point::Point(void)
 {
 }
 
-Point::Point(const Point &pts)
+Point::Point(const Point &pts) : x(pts.x), y(pts.y)
 {
-	*this = pts;
 }
 
-Point::Point(const float x, const float y)
+Point::Point(const float x, const float y) : x(Fixed(x)), y(Fixed(y))
 {
-	this->x.setRawBits(x);
-	this->y.setRawBits(y);
 }
 
 Point::~Point()
@@ -38,8 +35,17 @@ Point::~Point()
 
 Point	&Point::operator=(const Point &to_assign)
 {
-	this->x = to_assign.x;
-	this->y = to_assign.y;
+	(void)to_assign;
 	return (*this);
+}
+
+Fixed	Point::getX(void) const
+{
+	return (this->x);
+}
+
+Fixed	Point::getY(void) const
+{
+	return (this->y);
 }
 
