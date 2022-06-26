@@ -6,7 +6,7 @@
 /*   By: hrecolet <hrecolet@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/11 10:16:39 by hrecolet          #+#    #+#             */
-/*   Updated: 2022/06/23 11:02:26 by hrecolet         ###   ########.fr       */
+/*   Updated: 2022/06/26 11:37:42 by hrecolet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,5 +20,8 @@ int main( void )
 	Point C(10, 30);
 	Point point(10, 15);
 
-	std::cout << bsp(A, B, C, point);
+	if (bsp(A, B , C, point))
+		std::cout << "the point is inside the Triange" << std::endl;
+	else
+		std::cout << "the point is not inside the triange" << std::endl;
 }

@@ -6,7 +6,7 @@
 /*   By: hrecolet <hrecolet@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/23 10:36:23 by hrecolet          #+#    #+#             */
-/*   Updated: 2022/06/23 11:02:48 by hrecolet         ###   ########.fr       */
+/*   Updated: 2022/06/26 11:16:23 by hrecolet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,10 @@ class Point {
 		Point(const float x, const float y);
 		~Point();
 		Point	&operator=(const Point &to_assign);
+		
+		//ACCESSOR
+		Fixed	getX(void) const;
+		Fixed	getY(void) const;
 };
 
 bool	bsp(Point const a, Point const b, Point const c, Point const point);
