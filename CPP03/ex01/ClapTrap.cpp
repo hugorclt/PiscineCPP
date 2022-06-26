@@ -6,15 +6,23 @@
 /*   By: hrecolet <hrecolet@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/14 10:54:07 by hrecolet          #+#    #+#             */
-/*   Updated: 2022/06/24 20:58:30 by hrecolet         ###   ########.fr       */
+/*   Updated: 2022/06/25 13:23:23 by hrecolet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ClapTrap.hpp"
 
+ClapTrap::ClapTrap()
+{
+	std::cout << "ClapTrap is born" << std::endl;
+	this->energy = 10;
+	this->health = 10;
+	this->damage = 0;
+}
+
 ClapTrap::ClapTrap(std::string name)
 {
-	std::cout << name << " is born" << std::endl;
+	std::cout << name << " ClapTrap is born" << std::endl;
 	this->name = name;
 	this->energy = 10;
 	this->health = 10;
@@ -23,27 +31,27 @@ ClapTrap::ClapTrap(std::string name)
 
 ClapTrap::ClapTrap(const ClapTrap &inst)
 {
-	std::cout << "a clone of " << inst.name << " was created" << std::endl;
+	std::cout << "a clone of " << inst.name << " ClapTrap was created" << std::endl;
 	*this = inst;
 }
 
 ClapTrap::~ClapTrap(void)
 {
-	std::cout << this->name << " was destroyed by the angry compilo" << std::endl;
+	std::cout << this->name << " Claptrap was destroyed by the angry compilo" << std::endl;
 }
 
 void	ClapTrap::attack(const std::string &target)
 {
-	if (this->health && this->energy)
+	if (this->health > 0 && this->energy > 0)
 	{
 		this->energy--;
-		std::cout << "ClapTrap " << this->name << " attacks " << target << ", causing " << this->damage << " points of damage!" << std::endl;
+		std::cout << this->name << " : attacks " << target << ", causing " << this->damage << " points of damage!" << std::endl;
 	}
 }
 
 void	ClapTrap::takeDamage(unsigned int amount)
 {
-	if (this->health && this->energy)
+	if (this->health > 0 && this->energy > 0)
 	{
 		this->health -= amount;
 		std::cout << this->name << " : ouch! i lost " << amount << " healths points" << std::endl;
@@ -52,7 +60,7 @@ void	ClapTrap::takeDamage(unsigned int amount)
 
 void	ClapTrap::beRepaired(unsigned int amount)
 {
-	if (this->energy && this->health)
+	if (this->energy > 0 && this->health > 0)
 	{
 		this->health += amount;
 		this->energy--;	

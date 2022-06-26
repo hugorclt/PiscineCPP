@@ -6,13 +6,13 @@
 #    By: hrecolet <hrecolet@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/03/02 20:59:38 by hrecolet          #+#    #+#              #
-#    Updated: 2022/06/24 20:55:57 by hrecolet         ###   ########.fr        #
+#    Updated: 2022/06/25 12:47:34 by hrecolet         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRCS		=	main.cpp ClapTrap.cpp
+SRCS		=	main.cpp ClapTrap.cpp ScavTrap.cpp
 
-INCL		=	ClapTrap.hpp
+INCL		=	ClapTrap.hpp ScavTrap.hpp
 
 CC			=	c++
 
@@ -20,7 +20,7 @@ CFLAGS		=	-Wall -Werror -Wextra -std=c++98
 
 RM			=	rm -f
 
-NAME		=	ClapTrap
+NAME		=	scavtrap
 
 OBJ			=	$(SRCS:.cpp=.o)
 

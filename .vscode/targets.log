@@ -10,7 +10,7 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 make: *** No rule to make target `all'.  Stop.
 
 
-# Make data base, printed on Fri Jun 24 09:25:42 2022
+# Make data base, printed on Sat Jun 25 13:47:16 2022
 
 # Variables
 
@@ -28,7 +28,6 @@ VSCODE_LOG_NATIVE = false
 @D = $(patsubst %/,%,$(dir $@))
 # automatic
 @F = $(notdir $@)
- 
 # makefile
 CURDIR := /Users/hugorecolet/Desktop/42/studs/Cercle4/PiscineCPP
 # makefile
@@ -213,6 +212,7 @@ all:
 
 # Not a target:
 .SUFFIXES:
+ 
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
@@ -245,7 +245,6 @@ makefile:
 
 # Not a target:
 GNUmakefile:
- 
 #  A default, MAKEFILES, or -include/sinclude makefile.
 #  Implicit rule search has been done.
 #  File does not exist.
@@ -267,6 +266,6 @@ GNUmakefile:
 # strcache size: total = 0 / max = 0 / min = 4096 / avg = 0
 # strcache free: total = 0 / max = 0 / min = 4096 / avg = 0
 
-# Finished Make data base on Fri Jun 24 09:25:42 2022
+# Finished Make data base on Sat Jun 25 13:47:16 2022
 
  

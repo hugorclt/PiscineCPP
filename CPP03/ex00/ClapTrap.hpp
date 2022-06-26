@@ -6,13 +6,14 @@
 /*   By: hrecolet <hrecolet@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/14 10:51:52 by hrecolet          #+#    #+#             */
-/*   Updated: 2022/06/14 11:27:00 by hrecolet         ###   ########.fr       */
+/*   Updated: 2022/06/24 20:55:08 by hrecolet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
 
-#include <string.h>
+#include <string>
+#include <iostream>
 
 class ClapTrap
 {
