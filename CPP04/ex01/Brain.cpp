@@ -1,41 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Weapon.cpp                                         :+:      :+:    :+:   */
+/*   Brain.cpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hrecolet <hrecolet@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/06/11 08:57:46 by hrecolet          #+#    #+#             */
-/*   Updated: 2022/06/27 10:12:27 by hrecolet         ###   ########.fr       */
+/*   Created: 2022/06/27 10:16:35 by hrecolet          #+#    #+#             */
+/*   Updated: 2022/06/27 10:46:37 by hrecolet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Weapon.hpp"
+#include "Brain.hpp"
 
-Weapon::Weapon(void)
-{
-	this->type = "random weapon";
-}
-
-Weapon::~Weapon()
+Brain::Brain(void)
 {
 }
 
-Weapon::Weapon(std::string name)
+Brain::~Brain(void)
 {
-	this->type = name;
 }
 
-const std::string	&Weapon::getType()
+Brain::Brain(Brain &to_cpy)
 {
-	std::string &ref = this->type;
-	return (ref);
+	*this = to_cpy;
 }
 
-void	Weapon::setType(std::string newType)
+Brain	&Brain::operator=(const Brain &to_assign)
 {
-	if (newType == "")
-		std::cout << "You must set a name for the Weapon" << std::endl;
-	else
-		this->type = newType;
+	for (int i = 0; i < 99; i++)
+		this->ideas[i] = to_assign.ideas[i];
+	return (*this);
 }
