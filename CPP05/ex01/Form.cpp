@@ -6,7 +6,7 @@
 /*   By: hrecolet <hrecolet@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/27 13:34:39 by hrecolet          #+#    #+#             */
-/*   Updated: 2022/06/27 14:47:50 by hrecolet         ###   ########.fr       */
+/*   Updated: 2022/06/28 17:53:29 by hrecolet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,7 +66,7 @@ std::ostream	&operator<<(std::ostream &stream, Form &form)
 	stream	<< "Form name : " << form.getName()
 			<< " is signed : " << form.getIsSigned()
 			<< " rank to sign :" << form.getRankToSign()
-			<< " rank to exec :" << form.getRankToSign()
+			<< " rank to exec :" << form.getRankToExec()
 			<< std::endl;
 	return (stream);
 }

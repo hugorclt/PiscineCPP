@@ -6,7 +6,7 @@
 /*   By: hrecolet <hrecolet@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/27 13:34:37 by hrecolet          #+#    #+#             */
-/*   Updated: 2022/06/27 14:46:30 by hrecolet         ###   ########.fr       */
+/*   Updated: 2022/06/28 17:50:51 by hrecolet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,24 +23,27 @@ class Form {
 		const int			rankToSign;
 		const int			rankToExec;
 
+		virtual void		beExecuted(void) = 0;
+
 	public:
 		//Constructor
 		Form();
 		Form(std::string name, const int rankToSign, const int rankToExec);
 		Form(Form &to_cpy);
-		~Form();
+		virtual ~Form(void) = 0;
 
 		//Accessor
 		std::string	getName(void);
 		bool		getIsSigned(void);
 		int			getRankToSign(void);
-		int		getRankToExec(void);
+		int			getRankToExec(void);
 
 		//Operator
 		Form	&operator=(const Form &to_assign);
 	
 		//Methods
 		void	beSigned(Bureaucrat &b);
+		void	execute(Bureaucrat const &executor);
 
 		//Exception
 		class GradeTooHighException : public std::exception{
@@ -50,12 +53,18 @@ class Form {
 					return ("Grade too high, value have to be between 1 and 150");
 				}
 		};
-
 		class GradeTooLowException : public std::exception {
 			public:
 				virtual const char 	*what() const throw()
 				{
 					return ("Grade too low, value have to be between 1 and 150");
+				}
+		};
+		class FormIsntSigned : public std::exception {
+			public:
+				virtual const char 	*what() const throw()
+				{
+					return ("Can't execute this form because it wasn't signed");
 				}
 		};
 };

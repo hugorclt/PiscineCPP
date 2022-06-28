@@ -6,7 +6,7 @@
 /*   By: hrecolet <hrecolet@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/27 12:01:06 by hrecolet          #+#    #+#             */
-/*   Updated: 2022/06/27 14:49:14 by hrecolet         ###   ########.fr       */
+/*   Updated: 2022/06/28 17:42:14 by hrecolet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -93,6 +93,11 @@ void		Bureaucrat::signForm(Form &form)
 	} catch ( std::exception &e) {
 		std::cout << this->name << " couldn't sign " << form.getName() << " because his grade is too low" << std::endl;
 	}
+}
+
+void	Bureaucrat::executeForm(Form & form)
+{
+	form.execute(*this);
 }
 
 //function form

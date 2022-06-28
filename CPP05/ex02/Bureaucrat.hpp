@@ -6,7 +6,7 @@
 /*   By: hrecolet <hrecolet@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/27 12:01:08 by hrecolet          #+#    #+#             */
-/*   Updated: 2022/06/27 14:11:45 by hrecolet         ###   ########.fr       */
+/*   Updated: 2022/06/28 17:42:19 by hrecolet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,6 +56,7 @@ class Bureaucrat {
 		void		incrRank(void);
 		void		decrRank(void);
 		void		signForm(Form &form);
+		void		executeForm(Form & form);
 };
 
 std::ostream	&operator<<(std::ostream &stream, const Bureaucrat &to_output);

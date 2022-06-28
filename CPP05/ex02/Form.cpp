@@ -6,11 +6,12 @@
 /*   By: hrecolet <hrecolet@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/27 13:34:39 by hrecolet          #+#    #+#             */
-/*   Updated: 2022/06/27 14:47:50 by hrecolet         ###   ########.fr       */
+/*   Updated: 2022/06/28 17:53:10 by hrecolet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Form.hpp"
+#include "Bureaucrat.hpp"
 
 Form::Form(void) : name("no_name_form"), isSigned(false), rankToSign(2), rankToExec(2)
 {
@@ -66,7 +67,17 @@ std::ostream	&operator<<(std::ostream &stream, Form &form)
 	stream	<< "Form name : " << form.getName()
 			<< " is signed : " << form.getIsSigned()
 			<< " rank to sign :" << form.getRankToSign()
-			<< " rank to exec :" << form.getRankToSign()
+			<< " rank to exec :" << form.getRankToExec()
 			<< std::endl;
 	return (stream);
+}
+
+//Methods
+void	Form::execute(const Bureaucrat &executor)
+{
+	if (this->rankToExec < executor.getRank())
+		throw Form::GradeTooLowException();
+	else if (this->getIsSigned() == false)
+		throw Form::FormIsntSigned();
+	this->beExecuted();
 }
