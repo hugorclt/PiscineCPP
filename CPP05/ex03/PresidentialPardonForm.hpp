@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   RobotomyRequestForm.hpp                            :+:      :+:    :+:   */
+/*   PresidentialPardonForm.hpp                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hrecolet <hrecolet@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/06/28 17:19:29 by hrecolet          #+#    #+#             */
-/*   Updated: 2022/06/28 20:32:53 by hrecolet         ###   ########.fr       */
+/*   Created: 2022/06/28 17:20:16 by hrecolet          #+#    #+#             */
+/*   Updated: 2022/06/28 20:35:59 by hrecolet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,14 @@
 #include "Form.hpp"
 #include <string>
 
-class RobotomyRequestForm : public Form {
+class PresidentialPardonForm : public Form {
 	private:
 		const std::string target;
 		void	beExecuted(void);
 
 	public:
-		RobotomyRequestForm(const std::string target = "Default");
-		RobotomyRequestForm(RobotomyRequestForm &oth);
-		~RobotomyRequestForm(void);
-		RobotomyRequestForm	&operator=(const RobotomyRequestForm &to_assign);
+		PresidentialPardonForm(const std::string target = "Default");
+		PresidentialPardonForm(PresidentialPardonForm &oth);
+		~PresidentialPardonForm(void);
+		PresidentialPardonForm	&operator=(const PresidentialPardonForm &to_assign);
 };

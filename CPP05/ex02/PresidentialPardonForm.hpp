@@ -6,7 +6,7 @@
 /*   By: hrecolet <hrecolet@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/28 17:20:16 by hrecolet          #+#    #+#             */
-/*   Updated: 2022/06/28 17:24:45 by hrecolet         ###   ########.fr       */
+/*   Updated: 2022/06/28 20:32:27 by hrecolet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,4 +23,5 @@ class PresidentialPardonForm : public Form {
 		PresidentialPardonForm(const std::string target = "Default");
 		PresidentialPardonForm(PresidentialPardonForm &oth);
 		~PresidentialPardonForm(void);
+		PresidentialPardonForm	&operator=(const PresidentialPardonForm &to_assign);
 };
