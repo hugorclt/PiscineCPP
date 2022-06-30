@@ -6,7 +6,7 @@
 #    By: hrecolet <hrecolet@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/03/02 20:59:38 by hrecolet          #+#    #+#              #
-#    Updated: 2022/06/30 03:11:31 by hrecolet         ###   ########.fr        #
+#    Updated: 2022/06/30 15:10:00 by hrecolet         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,7 +20,7 @@ CFLAGS		=	-Wall -Werror -Wextra -std=c++98
 
 RM			=	rm -f
 
-NAME		=	bureaucrat
+NAME		=	scalar
 
 OBJ			=	$(SRCS:.cpp=.o)
 

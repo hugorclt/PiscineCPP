@@ -6,7 +6,7 @@
 /*   By: hrecolet <hrecolet@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/25 12:48:07 by hrecolet          #+#    #+#             */
-/*   Updated: 2022/06/26 15:22:59 by hrecolet         ###   ########.fr       */
+/*   Updated: 2022/06/30 00:52:27 by hrecolet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,6 +62,6 @@ void	ScavTrap::attack(const std::string &target)
 	if (this->health > 0 && this->energy > 0)
 	{
 		this->energy--;
-		std::cout << this->name << " : attacks " << target << ", causing " << this->damage << " points of damage!" << std::endl;
+		std::cout << this->name << " ScavTrap : attacks " << target << ", causing " << this->damage << " points of damage!" << std::endl;
 	}
 }

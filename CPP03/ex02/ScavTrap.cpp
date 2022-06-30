@@ -6,7 +6,7 @@
 /*   By: hrecolet <hrecolet@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/25 12:48:07 by hrecolet          #+#    #+#             */
-/*   Updated: 2022/06/26 15:12:42 by hrecolet         ###   ########.fr       */
+/*   Updated: 2022/06/30 00:52:00 by hrecolet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,4 +55,13 @@ void	ScavTrap::guardGate(void)
 {
 	if (this->energy > 0 && this->health > 0)
 		std::cout << this->name << " : Gate Keeper mode activated" << std::endl;
+}
+
+void	ScavTrap::attack(const std::string &target)
+{
+	if (this->health > 0 && this->energy > 0)
+	{
+		this->energy--;
+		std::cout << this->name << " ScavTrap : attacks " << target << ", causing " << this->damage << " points of damage!" << std::endl;
+	}
 }

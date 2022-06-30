@@ -6,7 +6,7 @@
 /*   By: hrecolet <hrecolet@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/30 03:12:29 by hrecolet          #+#    #+#             */
-/*   Updated: 2022/06/30 04:05:55 by hrecolet         ###   ########.fr       */
+/*   Updated: 2022/06/30 15:14:25 by hrecolet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,8 +32,6 @@ bool	isDouble(std::string str)
 {
 	int	there_is_pts = 0;
 	
-	if (strcmp(str.c_str(), "-inf") == 0 || strcmp(str.c_str(), "+inf") == 0 || strcmp(str.c_str(), "nan") == 0)
-		return (true);
 	if (std::isdigit(str[0]) || str[0] == '-' || str[0] == '+')
 	{
 		for (int i = 1; i < int(str.length()); i++)
@@ -55,8 +53,6 @@ bool	isFloat(std::string str)
 {
 	int	there_is_pts = 0;
 	
-	if (strcmp(str.c_str(), "-inff") == 0 || strcmp(str.c_str(), "+inff") == 0 || strcmp(str.c_str(), "nanf") == 0)
-		return (true);
 	if (std::isdigit(str[0]) || str[0] == '-' || str[0] == '+')
 	{
 		for (int i = 1; i < int(str.length()); i++)
@@ -79,12 +75,34 @@ bool	isChar(std::string str)
 	if (str.length() == 1)
 	{
 		if (isdigit(str[0]) == 0)
-		{
-			if (isprint(str[0]))
-				return (true);
-		}
+			return (true);
 	}
 	return (false);
+}
+
+void	printChar(char *str)
+{
+	if (isprint(str[0]))
+		std::cout << "char : " << str[0] << std::endl;
+	else
+		std::cout << "char : non printable" << std::endl;
+	 
+}
+
+void	whatType(std::string str)
+{
+	if (isChar(str) == true)
+		printChar(str.c_str());
+	else if (isInteger(str) == true)
+		printInt(atoi(str.c_str()));
+	else if (isFloat(str) == true)
+		printFloat(atof(str.c_str()));
+	else if (isDouble(str) == true)
+		printDouble(atof(str.c_str()));
+	else if (str == "-inff" || str == "+inff" || str == "nanf" || str == "-inf" || str == "+inf" || str == "nan")
+		printNan(str);
+	else
+		printImp(void);
 }
 
 int	main(int ac, char **av)

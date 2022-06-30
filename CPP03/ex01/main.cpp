@@ -6,7 +6,7 @@
 /*   By: hrecolet <hrecolet@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/14 11:22:18 by hrecolet          #+#    #+#             */
-/*   Updated: 2022/06/25 13:22:59 by hrecolet         ###   ########.fr       */
+/*   Updated: 2022/06/30 00:55:35 by hrecolet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,8 @@ int	main(void)
 	joe.attack("Bill");
 	yay.attack("Willfried");
 	yay2.takeDamage(200);
+
+	//Can't do cuz he don't have health anymore
 	yay2.beRepaired(100);
 	yay2.guardGate();
 

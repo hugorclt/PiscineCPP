@@ -6,7 +6,7 @@
 /*   By: hrecolet <hrecolet@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/25 12:48:10 by hrecolet          #+#    #+#             */
-/*   Updated: 2022/06/26 15:20:38 by hrecolet         ###   ########.fr       */
+/*   Updated: 2022/06/30 00:51:50 by hrecolet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,4 +30,5 @@ class ScavTrap : public ClapTrap {
 
 		//Function
 		void	guardGate();
+		void	attack(const std::string &target);
 };
