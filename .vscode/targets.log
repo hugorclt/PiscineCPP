@@ -10,7 +10,7 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 make: *** No rule to make target `all'.  Stop.
 
 
-# Make data base, printed on Thu Jun 30 03:12:27 2022
+# Make data base, printed on Thu Jun 30 16:39:11 2022
 
 # Variables
 
@@ -18,8 +18,6 @@ make: *** No rule to make target `all'.  Stop.
 <D = $(patsubst %/,%,$(dir $<))
 # automatic
 ?F = $(notdir $?)
-# environment
-ELECTRON_NO_ATTACH_CONSOLE = 1
 # environment
 VSCODE_LOG_NATIVE = false
 # automatic
@@ -32,7 +30,6 @@ VSCODE_LOG_NATIVE = false
 CURDIR := /Users/hugorecolet/Desktop/42/studs/Cercle4/PiscineCPP
 # makefile
 SHELL = /bin/sh
- 
 # environment
 VSCODE_NLS_CONFIG = {"locale":"fr","availableLanguages":{},"_languagePackSupport":true}
 # environment
@@ -46,9 +43,9 @@ __CFBundleIdentifier = com.microsoft.VSCode
 # environment
 INFOPATH = /opt/homebrew/share/info:
 # environment
-VSCODE_IPC_HOOK_EXTHOST = /var/folders/np/3n81l2wd7gv0vjgd1vccsr8w0000gn/T/vscode-ipc-8f9c89c6-7d11-45a0-b263-8079b4fb0baf.sock
+VSCODE_IPC_HOOK_EXTHOST = /var/folders/np/3n81l2wd7gv0vjgd1vccsr8w0000gn/T/vscode-ipc-268d29b1-53eb-4c7d-8fdd-5b87be005723.sock
 # environment
-VSCODE_CWD = /Users/hugorecolet/Desktop/42/studs/Cercle4/PiscineCPP
+VSCODE_CWD = /
 # environment
 PATH = /Library/Frameworks/Python.framework/Versions/3.8/bin:/opt/homebrew/bin:/opt/homebrew/sbin:/Library/Frameworks/Python.framework/Versions/3.9/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/Library/Frameworks/Mono.framework/Versions/Current/Commands:/Users/hugorecolet/.spicetify:/opt/homebrew/bin:/opt/homebrew/sbin:/Library/Frameworks/Python.framework/Versions/3.9/bin
 # environment
@@ -64,6 +61,7 @@ SSH_AUTH_SOCK = /private/tmp/com.apple.launchd.0fHpMr0heK/Listeners
 # automatic
 %F = $(notdir $%)
 # environment
+ 
 DISPLAY = /private/tmp/com.apple.launchd.IoJLrutAMq/org.xquartz:0
 # environment
 VSCODE_PIPE_LOGGING = true
@@ -75,7 +73,6 @@ HOMEBREW_CELLAR = /opt/homebrew/Cellar
 ORIGINAL_XDG_CURRENT_DESKTOP = undefined
 # environment
 MANPATH = /opt/homebrew/share/man::
- 
 # environment
 VSCODE_AMD_ENTRYPOINT = vs/workbench/api/node/extensionHostProcess
 # environment
@@ -83,9 +80,7 @@ HOME = /Users/hugorecolet
 # default
 MAKEFILEPATH = $(shell /usr/bin/xcode-select -print-path 2>/dev/null || echo /Developer)/Makefiles
 # environment
-VSCODE_CLI = 1
-# environment
-VSCODE_CODE_CACHE_PATH = /Users/hugorecolet/Library/Application Support/Code/CachedData/4af164ea3a06f701fe3e89a2bcbb421d2026b68f
+VSCODE_CODE_CACHE_PATH = /Users/hugorecolet/Library/Application Support/Code/CachedData/30d9c6cd9483b2cc586687151bcbcd635f373630
 # environment
 LOGNAME = hugorecolet
 # environment
@@ -98,33 +93,25 @@ VSCODE_HANDLES_UNCAUGHT_ERRORS = true
 ^D = $(patsubst %/,%,$(dir $^))
 # environment
 XPC_FLAGS = 0x0
-# environment
-COLORTERM = truecolor
 # default
 MAKE = $(MAKE_COMMAND)
+# default
+MAKECMDGOALS := all
 # environment
-LC_TERMINAL = iTerm2
-# environment
-SHLVL = 3
+SHLVL = 1
 # default
 MAKE_VERSION := 3.81
 # environment
 USER = hugorecolet
 # makefile
-.DEFAULT_GOAL := 
-# default
-MAKECMDGOALS := all
-# environment
-TERM_SESSION_ID = w0t0p0:2328CC60-E513-467C-85A4-87F8F97D89DC
  
+.DEFAULT_GOAL := 
 # environment
 LESS = -R
 # automatic
 %D = $(patsubst %/,%,$(dir $%))
 # default
 MAKE_COMMAND := /Library/Developer/CommandLineTools/usr/bin/make
-# environment
-TERM_PROGRAM = iTerm.app
 # default
 .VARIABLES := 
 # environment
@@ -132,7 +119,7 @@ TMPDIR = /var/folders/np/3n81l2wd7gv0vjgd1vccsr8w0000gn/T/
 # automatic
 *F = $(notdir $*)
 # environment
-VSCODE_IPC_HOOK = /Users/hugorecolet/Library/Application Support/Code/1.68.0-main.sock
+VSCODE_IPC_HOOK = /Users/hugorecolet/Library/Application Support/Code/1.68.1-main.sock
 # makefile
 MAKEFLAGS = Rrqp
 # environment
@@ -140,11 +127,7 @@ MFLAGS = -Rrqp
 # automatic
 *D = $(patsubst %/,%,$(dir $*))
 # environment
-TERM_PROGRAM_VERSION = 3.4.15
-# environment
-XPC_SERVICE_NAME = application.com.microsoft.VSCode.34050388.34050394.AE7FDDB3-5262-4802-872C-5AA9BB086D5D
-# environment
-LC_TERMINAL_VERSION = 3.4.15
+XPC_SERVICE_NAME = application.com.microsoft.VSCode.34273783.34273789
 # environment
 HOMEBREW_PREFIX = /opt/homebrew
 # automatic
@@ -152,22 +135,15 @@ HOMEBREW_PREFIX = /opt/homebrew
 # automatic
 +F = $(notdir $+)
 # environment
-ITERM_SESSION_ID = w0t0p0:2328CC60-E513-467C-85A4-87F8F97D89DC
-# environment
 HOMEBREW_REPOSITORY = /opt/homebrew
-# environment
-COLORFGBG = 15;0
 # environment
 __CF_USER_TEXT_ENCODING = 0x1F5:0x0:0x1
 # environment
- 
 COMMAND_MODE = unix2003
 # default
 MAKEFILES := 
 # automatic
 <F = $(notdir $<)
-# environment
-ITERM_PROFILE = Default
 # environment
 PAGER = less
 # environment
@@ -183,11 +159,10 @@ MAKELEVEL := 0
 # environment
 LANG = C
 # environment
-TERM = xterm-256color
-# environment
-VSCODE_PID = 74217
+VSCODE_PID = 30778
 # variable set hash-table stats:
-# Load=84/1024=8%, Rehash=0, Collisions=4/105=4%
+ 
+# Load=72/1024=7%, Rehash=0, Collisions=1/93=1%
 
 # Pattern-specific Variable Values
 
@@ -195,9 +170,9 @@ VSCODE_PID = 74217
 
 # Directories
 
-# . (device 16777232, inode 34133744): 11 files, no impossibilities.
+# . (device 16777232, inode 34133744): 12 files, no impossibilities.
 
-# 11 files, no impossibilities in 1 directories.
+# 12 files, no impossibilities in 1 directories.
 
 # Implicit Rules
 
@@ -269,6 +244,6 @@ GNUmakefile:
 # strcache size: total = 0 / max = 0 / min = 4096 / avg = 0
 # strcache free: total = 0 / max = 0 / min = 4096 / avg = 0
 
-# Finished Make data base on Thu Jun 30 03:12:27 2022
+# Finished Make data base on Thu Jun 30 16:39:11 2022
 
  
