@@ -6,12 +6,15 @@
 /*   By: hrecolet <hrecolet@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/30 03:12:29 by hrecolet          #+#    #+#             */
-/*   Updated: 2022/06/30 15:14:25 by hrecolet         ###   ########.fr       */
+/*   Updated: 2022/06/30 17:53:28 by hrecolet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
 #include <cstring>
+#include <climits>
+#include <iomanip>
+#include <cstdlib>
 
 bool	isInteger(std::string str)
 {
@@ -80,29 +83,31 @@ bool	isChar(std::string str)
 	return (false);
 }
 
-void	printChar(char *str)
+void	printChar(const char *str)
 {
 	if (isprint(str[0]))
 		std::cout << "char : " << str[0] << std::endl;
 	else
 		std::cout << "char : non printable" << std::endl;
-	 
+	std::cout << "integer : "<< static_cast<int>(str[0]) << std::endl;
+	std::cout << "float : "<< static_cast<float>(str[0]) << "f" << std::endl;
+	std::cout << "double : "<< static_cast<double>(str[0]) << std::endl;	 
 }
 
 void	whatType(std::string str)
 {
 	if (isChar(str) == true)
 		printChar(str.c_str());
-	else if (isInteger(str) == true)
-		printInt(atoi(str.c_str()));
-	else if (isFloat(str) == true)
-		printFloat(atof(str.c_str()));
-	else if (isDouble(str) == true)
-		printDouble(atof(str.c_str()));
-	else if (str == "-inff" || str == "+inff" || str == "nanf" || str == "-inf" || str == "+inf" || str == "nan")
-		printNan(str);
-	else
-		printImp(void);
+	// else if (isInteger(str) == true)
+	// 	printInt(atoi(str.c_str()));
+	// else if (isFloat(str) == true)
+	// 	printFloat(atof(str.c_str()));
+	// else if (isDouble(str) == true)
+	// 	printDouble(atof(str.c_str()));
+	// else if (str == "-inff" || str == "+inff" || str == "nanf" || str == "-inf" || str == "+inf" || str == "nan")
+	// 	printNan(str);
+	// else
+	// 	printImp(void);
 }
 
 int	main(int ac, char **av)
@@ -110,6 +115,8 @@ int	main(int ac, char **av)
 	if (ac == 2)
 	{
 		std::string str(av[1]);
+		std::cout << std::setprecision(1) << std::fixed;
+		whatType(str);
 	}
 	else
 		std::cout << "Wrong number of arguments {1 required}" << std::endl;
