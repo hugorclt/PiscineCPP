@@ -10,7 +10,7 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 make: *** No rule to make target `all'.  Stop.
 
 
-# Make data base, printed on Tue Jun 28 20:53:56 2022
+# Make data base, printed on Thu Jun 30 03:12:27 2022
 
 # Variables
 
@@ -27,12 +27,12 @@ VSCODE_LOG_NATIVE = false
 # automatic
 @D = $(patsubst %/,%,$(dir $@))
 # automatic
- 
 @F = $(notdir $@)
 # makefile
 CURDIR := /Users/hugorecolet/Desktop/42/studs/Cercle4/PiscineCPP
 # makefile
 SHELL = /bin/sh
+ 
 # environment
 VSCODE_NLS_CONFIG = {"locale":"fr","availableLanguages":{},"_languagePackSupport":true}
 # environment
@@ -75,6 +75,7 @@ HOMEBREW_CELLAR = /opt/homebrew/Cellar
 ORIGINAL_XDG_CURRENT_DESKTOP = undefined
 # environment
 MANPATH = /opt/homebrew/share/man::
+ 
 # environment
 VSCODE_AMD_ENTRYPOINT = vs/workbench/api/node/extensionHostProcess
 # environment
@@ -115,6 +116,7 @@ USER = hugorecolet
 MAKECMDGOALS := all
 # environment
 TERM_SESSION_ID = w0t0p0:2328CC60-E513-467C-85A4-87F8F97D89DC
+ 
 # environment
 LESS = -R
 # automatic
@@ -157,8 +159,8 @@ HOMEBREW_REPOSITORY = /opt/homebrew
 COLORFGBG = 15;0
 # environment
 __CF_USER_TEXT_ENCODING = 0x1F5:0x0:0x1
- 
 # environment
+ 
 COMMAND_MODE = unix2003
 # default
 MAKEFILES := 
@@ -193,9 +195,9 @@ VSCODE_PID = 74217
 
 # Directories
 
-# . (device 16777232, inode 34133744): 10 files, no impossibilities.
+# . (device 16777232, inode 34133744): 11 files, no impossibilities.
 
-# 10 files, no impossibilities in 1 directories.
+# 11 files, no impossibilities in 1 directories.
 
 # Implicit Rules
 
@@ -267,6 +269,6 @@ GNUmakefile:
 # strcache size: total = 0 / max = 0 / min = 4096 / avg = 0
 # strcache free: total = 0 / max = 0 / min = 4096 / avg = 0
 
-# Finished Make data base on Tue Jun 28 20:53:56 2022
+# Finished Make data base on Thu Jun 30 03:12:27 2022
 
  

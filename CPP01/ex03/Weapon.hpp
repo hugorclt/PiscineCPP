@@ -6,7 +6,7 @@
 /*   By: hrecolet <hrecolet@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/11 08:57:53 by hrecolet          #+#    #+#             */
-/*   Updated: 2022/06/24 09:48:39 by hrecolet         ###   ########.fr       */
+/*   Updated: 2022/06/30 00:11:33 by hrecolet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,8 +23,7 @@ private:
 	std::string type;
 
 public:
-	Weapon(std::string name);
-	Weapon();
+	Weapon(std::string const &name);
 	~Weapon();
 	const std::string	&getType();
 	void				setType(std::string newType);

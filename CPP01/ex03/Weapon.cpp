@@ -6,22 +6,18 @@
 /*   By: hrecolet <hrecolet@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/11 08:57:46 by hrecolet          #+#    #+#             */
-/*   Updated: 2022/06/27 10:12:27 by hrecolet         ###   ########.fr       */
+/*   Updated: 2022/06/30 00:11:42 by hrecolet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Weapon.hpp"
 
-Weapon::Weapon(void)
-{
-	this->type = "random weapon";
-}
 
 Weapon::~Weapon()
 {
 }
 
-Weapon::Weapon(std::string name)
+Weapon::Weapon(std::string const &name)
 {
 	this->type = name;
 }
