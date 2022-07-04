@@ -10,10 +10,11 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 make: *** No rule to make target `all'.  Stop.
 
 
-# Make data base, printed on Thu Jun 30 16:39:11 2022
+# Make data base, printed on Mon Jul  4 16:09:22 2022
 
 # Variables
 
+ 
 # automatic
 <D = $(patsubst %/,%,$(dir $<))
 # automatic
@@ -61,7 +62,6 @@ SSH_AUTH_SOCK = /private/tmp/com.apple.launchd.0fHpMr0heK/Listeners
 # automatic
 %F = $(notdir $%)
 # environment
- 
 DISPLAY = /private/tmp/com.apple.launchd.IoJLrutAMq/org.xquartz:0
 # environment
 VSCODE_PIPE_LOGGING = true
@@ -84,7 +84,7 @@ VSCODE_CODE_CACHE_PATH = /Users/hugorecolet/Library/Application Support/Code/Cac
 # environment
 LOGNAME = hugorecolet
 # environment
-APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = true
+APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = 1
 # environment
 ZSH = /Users/hugorecolet/.oh-my-zsh
 # environment
@@ -161,7 +161,6 @@ LANG = C
 # environment
 VSCODE_PID = 30778
 # variable set hash-table stats:
- 
 # Load=72/1024=7%, Rehash=0, Collisions=1/93=1%
 
 # Pattern-specific Variable Values
@@ -226,6 +225,7 @@ GNUmakefile:
 #  A default, MAKEFILES, or -include/sinclude makefile.
 #  Implicit rule search has been done.
 #  File does not exist.
+ 
 #  File has been updated.
 #  Failed to be updated.
 # variable set hash-table stats:
@@ -244,6 +244,6 @@ GNUmakefile:
 # strcache size: total = 0 / max = 0 / min = 4096 / avg = 0
 # strcache free: total = 0 / max = 0 / min = 4096 / avg = 0
 
-# Finished Make data base on Thu Jun 30 16:39:11 2022
+# Finished Make data base on Mon Jul  4 16:09:22 2022
 
  
