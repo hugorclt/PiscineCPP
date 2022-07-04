@@ -1,7 +1,6 @@
 make --dry-run --keep-going --print-directory
 make: Entering directory `/Users/hugorecolet/Desktop/42/studs/Cercle4/PiscineCPP'
+make: Leaving directory `/Users/hugorecolet/Desktop/42/studs/Cercle4/PiscineCPP'
  
 make: *** No targets specified and no makefile found.  Stop.
 
-make: Leaving directory `/Users/hugorecolet/Desktop/42/studs/Cercle4/PiscineCPP'
- 

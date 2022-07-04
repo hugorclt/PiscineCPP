@@ -6,13 +6,13 @@
 #    By: hrecolet <hrecolet@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/03/02 20:59:38 by hrecolet          #+#    #+#              #
-#    Updated: 2022/07/04 21:43:16 by hrecolet         ###   ########.fr        #
+#    Updated: 2022/07/04 21:48:37 by hrecolet         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRCS		=	main.cpp
+SRCS		=	main.cpp Base.cpp
 
-INCL		=	Data.hpp
+INCL		=	Base.hpp A.hpp B.hpp C.hpp
 
 CC			=	c++
 
@@ -20,7 +20,7 @@ CFLAGS		=	-Wall -Werror -Wextra -std=c++98
 
 RM			=	rm -f
 
-NAME		=	serialize
+NAME		=	identify
 
 OBJ			=	$(SRCS:.cpp=.o)
 

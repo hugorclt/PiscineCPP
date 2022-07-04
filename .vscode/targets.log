@@ -10,11 +10,10 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 make: *** No rule to make target `all'.  Stop.
 
 
-# Make data base, printed on Mon Jul  4 16:09:22 2022
+# Make data base, printed on Mon Jul  4 21:48:51 2022
 
 # Variables
 
- 
 # automatic
 <D = $(patsubst %/,%,$(dir $<))
 # automatic
@@ -41,10 +40,11 @@ MAKEFILE_LIST :=
 VSCODE_VERBOSE_LOGGING = true
 # environment
 __CFBundleIdentifier = com.microsoft.VSCode
+ 
 # environment
 INFOPATH = /opt/homebrew/share/info:
 # environment
-VSCODE_IPC_HOOK_EXTHOST = /var/folders/np/3n81l2wd7gv0vjgd1vccsr8w0000gn/T/vscode-ipc-268d29b1-53eb-4c7d-8fdd-5b87be005723.sock
+VSCODE_IPC_HOOK_EXTHOST = /var/folders/np/3n81l2wd7gv0vjgd1vccsr8w0000gn/T/vscode-ipc-9160db37-3104-49f9-b30a-d018783a6f62.sock
 # environment
 VSCODE_CWD = /
 # environment
@@ -84,7 +84,7 @@ VSCODE_CODE_CACHE_PATH = /Users/hugorecolet/Library/Application Support/Code/Cac
 # environment
 LOGNAME = hugorecolet
 # environment
-APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = 1
+APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = true
 # environment
 ZSH = /Users/hugorecolet/.oh-my-zsh
 # environment
@@ -104,7 +104,6 @@ MAKE_VERSION := 3.81
 # environment
 USER = hugorecolet
 # makefile
- 
 .DEFAULT_GOAL := 
 # environment
 LESS = -R
@@ -159,7 +158,7 @@ MAKELEVEL := 0
 # environment
 LANG = C
 # environment
-VSCODE_PID = 30778
+VSCODE_PID = 40415
 # variable set hash-table stats:
 # Load=72/1024=7%, Rehash=0, Collisions=1/93=1%
 
@@ -225,7 +224,6 @@ GNUmakefile:
 #  A default, MAKEFILES, or -include/sinclude makefile.
 #  Implicit rule search has been done.
 #  File does not exist.
- 
 #  File has been updated.
 #  Failed to be updated.
 # variable set hash-table stats:
@@ -244,6 +242,6 @@ GNUmakefile:
 # strcache size: total = 0 / max = 0 / min = 4096 / avg = 0
 # strcache free: total = 0 / max = 0 / min = 4096 / avg = 0
 
-# Finished Make data base on Mon Jul  4 16:09:22 2022
+# Finished Make data base on Mon Jul  4 21:48:51 2022
 
  
