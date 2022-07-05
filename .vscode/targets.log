@@ -10,7 +10,7 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 make: *** No rule to make target `all'.  Stop.
 
 
-# Make data base, printed on Mon Jul  4 21:48:51 2022
+# Make data base, printed on Tue Jul  5 13:34:31 2022
 
 # Variables
 
@@ -25,6 +25,7 @@ VSCODE_LOG_NATIVE = false
 # automatic
 @D = $(patsubst %/,%,$(dir $@))
 # automatic
+ 
 @F = $(notdir $@)
 # makefile
 CURDIR := /Users/hugorecolet/Desktop/42/studs/Cercle4/PiscineCPP
@@ -40,7 +41,6 @@ MAKEFILE_LIST :=
 VSCODE_VERBOSE_LOGGING = true
 # environment
 __CFBundleIdentifier = com.microsoft.VSCode
- 
 # environment
 INFOPATH = /opt/homebrew/share/info:
 # environment
@@ -242,6 +242,6 @@ GNUmakefile:
 # strcache size: total = 0 / max = 0 / min = 4096 / avg = 0
 # strcache free: total = 0 / max = 0 / min = 4096 / avg = 0
 
-# Finished Make data base on Mon Jul  4 21:48:51 2022
+# Finished Make data base on Tue Jul  5 13:34:31 2022
 
  

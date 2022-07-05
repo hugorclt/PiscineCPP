@@ -6,7 +6,7 @@
 /*   By: hrecolet <hrecolet@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/04 21:46:15 by hrecolet          #+#    #+#             */
-/*   Updated: 2022/07/04 21:50:10 by hrecolet         ###   ########.fr       */
+/*   Updated: 2022/07/05 13:34:58 by hrecolet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,5 @@
 
 class Base {
 	public:
-		virtual ~Base();
-		
-		Base	*generate();
+		virtual ~Base() {};
 };
