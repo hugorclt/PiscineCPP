@@ -6,7 +6,7 @@
 /*   By: hrecolet <hrecolet@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/06 22:12:45 by hrecolet          #+#    #+#             */
-/*   Updated: 2022/07/06 22:30:59 by hrecolet         ###   ########.fr       */
+/*   Updated: 2022/07/06 22:31:32 by hrecolet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ int main()
 			std::cout << *it << std::endl;
 			++it;
 		}
-	} catch(const std::exception& e) {
+	} catch(std::exception& e) {
 		std::cerr << e.what() << std::endl;
 	}
 	try
@@ -53,7 +53,7 @@ int main()
             std::cout << *it2 << std::endl;
             ++it2;
         }
-	} catch(const std::exception& e) {
+	} catch(std::exception& e) {
 		std::cerr << e.what() << std::endl;
 	}
 
