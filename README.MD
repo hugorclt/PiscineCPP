@@ -8,7 +8,7 @@ ___
 
 ### Table of contents
 
-1. [CPP00: Strings and I/O Manipulation](#-cpp00:)
+1. [CPP00: Strings and I/O Manipulation](#cpp00)
 2. [CPP01: New, class, constructor, ... : basics](#cpp01:)
 3. [CPP02: Operator overload](#cpp02:)
 4. [CPP03: Inheritance : basics](#cpp03:)
