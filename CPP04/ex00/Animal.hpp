@@ -6,7 +6,7 @@
 /*   By: hrecolet <hrecolet@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/26 20:08:32 by hrecolet          #+#    #+#             */
-/*   Updated: 2022/06/26 20:27:16 by hrecolet         ###   ########.fr       */
+/*   Updated: 2022/09/10 16:31:26 by hrecolet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ class Animal {
 	public:
 		Animal();
 		Animal(Animal &to_cpy);
-		~Animal();
+		virtual ~Animal();
 
 		//Operator
 		Animal	&operator=(const Animal &to_assign);

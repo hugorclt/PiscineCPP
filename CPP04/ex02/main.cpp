@@ -6,7 +6,7 @@
 /*   By: hrecolet <hrecolet@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/27 10:28:59 by hrecolet          #+#    #+#             */
-/*   Updated: 2022/06/27 11:28:58 by hrecolet         ###   ########.fr       */
+/*   Updated: 2022/09/10 16:32:35 by hrecolet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,5 +24,7 @@ int main()
 	dog->makeSound();
 	cat->makeSound();
 
+	delete dog;
+	delete cat;
 	return 0;
 }
