@@ -6,7 +6,7 @@
 /*   By: hrecolet <hrecolet@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/26 20:18:21 by hrecolet          #+#    #+#             */
-/*   Updated: 2022/06/27 10:48:17 by hrecolet         ###   ########.fr       */
+/*   Updated: 2022/09/10 14:31:21 by hrecolet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,6 +50,12 @@ std::string	Animal::getType(void) const
 }
 
 
+
+
+
+
+
+
 //Dog
 
 Dog::Dog()
@@ -80,6 +86,13 @@ void	Dog::makeSound(void) const
 {
 	std::cout << "yes im barking now" << std::endl;
 }
+
+
+
+
+
+
+
 
 
 //Cat

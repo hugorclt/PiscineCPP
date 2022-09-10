@@ -1,5 +1,4 @@
 ## 42 C++ Piscine September 2022
-
 ### Summary
 
 A group of subject designed to **learn CPP** through differents **exercices**, here are some explanation about the specification of every modules. 
@@ -105,7 +104,8 @@ ___
 in **`C++`** you can overload all the operator, for example i want a new class MyInt, it have one attribute **`int`** number and i want to change the comportement of the **`+`** operator
 
 ```cpp
-class MyInt {
+class MyInt 
+{
 	private:
 		int number;
 
@@ -132,7 +132,8 @@ ___
 
 A class can inherit from another and share the same function and the same attributes
 ```cpp
-class Animals {
+class Animals 
+{
 	protected:
 		int		numOfLegs;
 	
@@ -141,7 +142,8 @@ class Animals {
 		void	walk();
 };
 
-class Cat : public Animals {
+class Cat : public Animals 
+{
 	public:
 		void	meow();
 
@@ -161,7 +163,92 @@ ___
 ### CPP04:
 ##### Polymorphism
 
-_todo_
+if a base class have a virtual function, this function can be overriden in the derived class
+```cpp
+class Animals 
+{
+	protected:
+		int		numOfLegs;
+	
+	public:
+		void	getNumOfLegs() const;
+		virtual void	walk() {
+			std::cout << "i'm walking!" << std::endl;
+		};
+};
+
+class Cat : public Animals 
+{
+	public:
+		virtual void	walk() {
+			std::cout << "i'm meowing" << std::endl;
+		};
+};
+
+int main()
+{
+	Cat	felix();
+	Animals	thing();
+
+	felix.walk(); //"i'm walking!"
+	felix.getNumOfLegs(); //Works!
+	thing.walk(); //"i'm meowing"
+}
+```
+
+if a class have a virtual methods **equals to zero**, this class is an **interface**, it can't be instanciated, it's just useful for **inheritance**
+
+```cpp
+class Animals 
+{
+	protected:
+		int		numOfLegs;
+	
+	public:
+		void	getNumOfLegs() const;
+		virtual void	walk() = 0;
+};
+
+class Cat : public Animals
+{
+	public:
+		virtual void	walk()
+		{
+			std::cout << "i'm meowing" << std::endl;
+		};
+};
+
+int main()
+{
+	Cat	felix();
+	Animals	thing(); //DON'T WORK
+
+}
+```
+Sometimes it's necessary to have the **destructor** in **virtual** if you delete an instance from a derived class through a pointer of a base class
+
+```cpp
+class Base 
+{
+    // some virtual methods
+};
+
+class Derived : public Base
+{
+    ~Derived()
+    {
+        // Do some important cleanup
+    }
+};
+
+int main() 
+{
+	Base *b = new Derived();
+	// use b
+	delete b; // Here's the problem! (undefined behavior)
+}
+```
+Since Base's destructor is not virtual and b is a Base* pointing to a Derived object, delete b has **undefined behaviour**
 ___
 ### CPP05:
 ##### Exception, Try, Catch
