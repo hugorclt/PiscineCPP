@@ -1,4 +1,4 @@
-##42 C++ Piscine September 2022
+## 42 C++ Piscine September 2022
 
 ###Summary
 
