@@ -9,7 +9,7 @@ ___
 ### Table of contents
 
 1. [CPP00: Strings and I/O Manipulation](#cpp00)
-2. [CPP01: New, class, constructor, ... : basics](#cpp01)
+2. [CPP01: New, class, ...: basics](#cpp01)
 3. [CPP02: Operator overload](#cpp02)
 4. [CPP03: Inheritance : basics](#cpp03)
 5. [CPP04: Polymorphism](#cpp04)
@@ -43,7 +43,7 @@ We can use **`std::cin`** to communicate through **STDIN** and write information
 
 ___
 ### CPP01:
-##### New, class, constructor, ... : basics
+##### New, class, ... : basics
 
 Sometimes we want to use an object outside of the function that created it:
 ```cpp
@@ -102,28 +102,84 @@ ___
 ### CPP02:
 ##### Operator overload
 
+in **`C++`** you can overload all the operator, for example i want a new class MyInt, it have one attribute **`int`** number and i want to change the comportement of the **`+`** operator
+
+```cpp
+class MyInt {
+	private:
+		int number;
+
+	public:
+		MyInt	operator+(const &rhs)
+		{
+			return (this->number - rhs.number);
+		}
+};
+
+int main()
+{
+	MyInt int1(3);
+	MyInt int2(2);
+
+	std::cout << int1 + int2 << std::endl
+}
+```
+now the **`+`** operator acts like the **`-`** operator. You can define in your class all the operator (**`>`**, **`<`**, **`<=`**, **`>=`**, **`!=`**, **`==`**, **`>>`**, **`<<`**, **`=`**, **`[]`**, **`*`**, ...)
+
 ___
 ### CPP03:
 ##### Inheritance : basics
+
+A class can inherit from another and share the same function and the same attributes
+```cpp
+class Animals {
+	protected:
+		int		numOfLegs;
+	
+	public:
+		void	getNumOfLegs() const;
+		void	walk();
+};
+
+class Cat : public Animals {
+	public:
+		void	meow();
+
+}
+int main()
+{
+	Cat	felix();
+	Animals	thing();
+
+	felix.walk(); //Works!
+	felix.getNumOfLegs(); //Works!
+	thing.meow(); //Don't works!
+}
+```
 
 ___
 ### CPP04:
 ##### Polymorphism
 
+_todo_
 ___
 ### CPP05:
 ##### Exception, Try, Catch
 
+_todo_
 ___
 ### CPP06:
 ##### cast, convert...
 
+_todo_
 ___
 ### CPP07:
 ##### Template
 
+_todo_
 ___
 ### CPP08:
 ##### Containers
 
+_todo_
 
