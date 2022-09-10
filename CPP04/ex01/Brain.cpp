@@ -6,7 +6,7 @@
 /*   By: hrecolet <hrecolet@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/27 10:16:35 by hrecolet          #+#    #+#             */
-/*   Updated: 2022/06/27 10:46:37 by hrecolet         ###   ########.fr       */
+/*   Updated: 2022/09/10 17:21:36 by hrecolet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,12 @@
 
 Brain::Brain(void)
 {
+	std::cout << "Brain was created" << std::endl;
 }
 
 Brain::~Brain(void)
 {
+	std::cout << "Brain was destroyed" << std::endl;
 }
 
 Brain::Brain(Brain &to_cpy)

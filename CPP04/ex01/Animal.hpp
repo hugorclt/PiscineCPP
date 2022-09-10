@@ -6,7 +6,7 @@
 /*   By: hrecolet <hrecolet@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/26 20:08:32 by hrecolet          #+#    #+#             */
-/*   Updated: 2022/06/27 11:14:15 by hrecolet         ###   ########.fr       */
+/*   Updated: 2022/09/10 17:20:46 by hrecolet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,6 @@
 class Animal {
 	protected:
 		std::string	type;
-		Brain		*brain;
 
 	public:
 		virtual ~Animal();
@@ -33,6 +32,9 @@ class Animal {
 };
 
 class Dog : public Animal {
+	private:
+		Brain		*brain;
+		
 	public:
 		Dog();
 		Dog(Dog &to_cpy);
@@ -45,6 +47,9 @@ class Dog : public Animal {
 };
 
 class Cat : public Animal {
+	private:
+		Brain		*brain;
+		
 	public:
 		Cat();
 		Cat(Cat &to_cpy);
