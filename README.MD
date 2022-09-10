@@ -39,12 +39,64 @@ int	main()
 	std::cout << "My name is: " << name << std::endl;
 }
 ```
-We can use **`std::cin`** to use **STDIN** and write information to our code for example here with the function getline
-
+We can use **`std::cin`** to communicate through **STDIN** and write information to our code for example _above_ with the function **getline**
 
 ___
 ### CPP01:
 ##### New, class, constructor, ... : basics
+
+Sometimes we want to use an object outside of the function that created it:
+```cpp
+
+Cat	createCat(void)
+{
+	Cat	albert;
+
+	return (albert);
+}
+
+int	main()
+{
+	Cat albert = createCat();
+}
+```
+For example we **can't** do something like that because albert is destroyed when the function createCat() end, so we have to use the keyword **`new`** to create our Cat on the **heap** and not on the **stack**
+
+```cpp
+
+Cat	*createCat(void)
+{
+	Cat	*albert = new Cat();
+
+	return (albert);
+}
+
+int	main()
+{
+	Cat *albert = createCat();
+
+	delete albert;
+}
+```
+**Never** forget that you have to destroy **every** object _instanciated_ with the keyword **`new`** by using **`delete`**
+
+```cpp
+
+Cat	*createCat(void)
+{
+	Cat	*groupsOfCats = new Cat[10];
+
+	return (groupsOfCats);
+}
+
+int	main()
+{
+	Cat *groupsOfCats = createCat();
+
+	delete []groupsOfCats;
+}
+```
+Use **`delete[]`** to destroy entire array of object without having to **iterate** through it
 
 ___
 ### CPP02:
