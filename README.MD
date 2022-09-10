@@ -1,12 +1,12 @@
 ## 42 C++ Piscine September 2022
 
-###Summary
+### Summary
 
 A group of subject designed to **learn CPP** through differents **exercices**, here are some explanation about the specification of every modules. 
 
 ___
 
-###Table of contents
+### Table of contents
 
 1. [CPP00: Strings and I/O Manipulation](#CPP00:)
 2. [CPP01: New, class, constructor, ... : basics](#CPP01:)
@@ -19,8 +19,8 @@ ___
 9. [CPP08: Containers](#CPP08:)
 
 ___
-###CPP00:
-#####Strings and I/O Manipulation
+### CPP00:
+##### Strings and I/O Manipulation
 
 To write some text on **STDOUT** we use the **'<<'** operator to _push_  a string into it.
 ```cpp
@@ -43,35 +43,35 @@ We can use **`std::cin`** to use **STDIN** and write information to our code for
 
 
 ___
-###CPP01:
-#####New, class, constructor, ... : basics
+### CPP01:
+##### New, class, constructor, ... : basics
 
 ___
-###CPP02:
-#####Operator overload
+### CPP02:
+##### Operator overload
 
 ___
-###CPP03:
-#####Inheritance : basics
+### CPP03:
+##### Inheritance : basics
 
 ___
-###CPP04:
-#####Polymorphism
+### CPP04:
+##### Polymorphism
 
 ___
-###CPP05:
-#####Exception, Try, Catch
+### CPP05:
+##### Exception, Try, Catch
 
 ___
-###CPP06:
-#####cast, convert...
+### CPP06:
+##### cast, convert...
 
 ___
-###CPP07:
-#####Template
+### CPP07:
+##### Template
 
 ___
-###CPP08:
-#####Containers
+### CPP08:
+##### Containers
 
 
