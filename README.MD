@@ -252,8 +252,49 @@ Since Base's destructor is not virtual and b is a Base* pointing to a Derived ob
 ___
 ### CPP05:
 ##### Exception, Try, Catch
+The **`try`** and **`catch`** keyword are very useful to **spot** and **display** error messages, here a little piece of code to explain the methods.
 
-_todo_
+**Nested class** are an important part in creating exception, you define a nested class inheriting **`std::exception`** in order to throw error in your code.
+
+```cpp
+class Test {
+	public:
+	//here is a nested class
+		class ProblemsHere : public std::exception {
+			public:
+				virtual const char *what() const throw {
+					return ("the custom message u want");
+				}
+		}
+
+		void	doThing(std::string things);
+}
+
+void	Test::doThing(std::string things) {
+	if (!things)
+		throw ProblemsHere(); //throw an error, the name of the nested class
+		//with parenthesis
+	else
+		return (things);
+}
+
+
+int main() {
+	Test	obj;
+
+	try {
+		obj.doThing();
+	} catch (std::exception &e) {
+		std::cout << e.what() << std::endl;
+	}
+
+	//the execution continue here
+}
+```
+
+with the keyword try we **execute** an instruction, if the instruction **fail**, we catch an std::exception &e and use the function what to display the custome message we want.
+
+The executions of your code continue after the try and catch block.
 ___
 ### CPP06:
 ##### cast, convert...
