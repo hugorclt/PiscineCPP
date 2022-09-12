@@ -6,7 +6,7 @@
 /*   By: hrecolet <hrecolet@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/27 10:28:59 by hrecolet          #+#    #+#             */
-/*   Updated: 2022/06/27 11:15:55 by hrecolet         ###   ########.fr       */
+/*   Updated: 2022/09/12 09:45:17 by hrecolet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 int	main(void)
 {
-	const Animal	*animals[12];
+	Animal	*animals[12];
 	
 	for (int i = 0; i < 12; i++)
 	{
@@ -26,6 +26,28 @@ int	main(void)
 	}
 	for (int i = 0; i < 12; i++)
 		std::cout << animals[i]->getType() << std::endl;
+
+	//Test to know if the copy on an animal is shallow or deep
+	animals[0]->setType("ecureuil");
+	Animal	test(*animals[0]);
+	
+	std::cout << animals[0]->getType() << std::endl;
+	std::cout << test.getType() << std::endl;
+	test.setType("cat");
+
+	std::cout << animals[0]->getType() << std::endl;
+	std::cout << test.getType() << std::endl;
+	//here it's deep because when i change the type of "test" the type of animal is unchanged
+
+	//same for the assignation operator, it's a deep copy
+	*animals[0] = test;
+	std::cout << animals[0]->getType() << std::endl;
+	std::cout << test.getType() << std::endl;
+	test.setType("colossal Diplodocus");
+
+	std::cout << animals[0]->getType() << std::endl;
+	std::cout << test.getType() << std::endl;
+	
 	for (int i = 0; i < 12; i++)
 		delete animals[i];
 }

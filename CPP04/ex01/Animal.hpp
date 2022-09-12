@@ -6,7 +6,7 @@
 /*   By: hrecolet <hrecolet@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/26 20:08:32 by hrecolet          #+#    #+#             */
-/*   Updated: 2022/09/10 17:20:46 by hrecolet         ###   ########.fr       */
+/*   Updated: 2022/09/12 09:30:46 by hrecolet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,8 @@ class Animal {
 	
 		//Function
 		virtual void	makeSound() const;
-		std::string		getType() const;	
+		std::string		getType() const;
+		void			setType(const std::string	type);	
 };
 
 class Dog : public Animal {
