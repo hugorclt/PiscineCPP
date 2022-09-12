@@ -298,16 +298,11 @@ The executions of your code continue after the try and catch block.
 ___
 ### CPP06:
 ##### cast, convert...
-
-_todo_
 ___
 ### CPP07:
 ##### Template
-
-_todo_
 ___
 ### CPP08:
 ##### Containers
 
-_todo_
 
