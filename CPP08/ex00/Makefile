@@ -6,13 +6,13 @@
 #    By: hrecolet <hrecolet@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/03/02 20:59:38 by hrecolet          #+#    #+#              #
-#    Updated: 2022/07/06 20:36:07 by hrecolet         ###   ########.fr        #
+#    Updated: 2022/07/07 10:59:05 by hrecolet         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 SRCS		=	main.cpp
 
-INCL		=	Span.hpp
+INCL		=	easyfind.hpp
 
 CC			=	c++
 
@@ -20,7 +20,7 @@ CFLAGS		=	-Wall -Werror -Wextra -std=c++98
 
 RM			=	rm -f
 
-NAME		=	span
+NAME		=	easyfind
 
 OBJ			=	$(SRCS:.cpp=.o)
 

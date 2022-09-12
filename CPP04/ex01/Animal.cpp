@@ -6,7 +6,7 @@
 /*   By: hrecolet <hrecolet@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/26 20:18:21 by hrecolet          #+#    #+#             */
-/*   Updated: 2022/09/12 09:42:36 by hrecolet         ###   ########.fr       */
+/*   Updated: 2022/09/12 14:49:26 by hrecolet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,9 +83,7 @@ Dog::~Dog()
 
 Dog	&Dog::operator=(const Dog &to_assign)
 {
-	delete this->brain;
-	this->brain = new Brain();
-	this->brain = to_assign.brain;
+	*this->brain = *(to_assign.brain);
 	this->type = to_assign.type;
 	return (*this);
 }
@@ -125,9 +123,7 @@ Cat::~Cat()
 
 Cat	&Cat::operator=(const Cat &to_assign)
 {
-	delete this->brain;
-	this->brain = new Brain();
-	this->brain = to_assign.brain;
+	*this->brain = *(to_assign.brain);
 	this->type = to_assign.type;
 	return (*this);
 }

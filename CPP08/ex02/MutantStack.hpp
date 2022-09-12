@@ -6,7 +6,7 @@
 /*   By: hrecolet <hrecolet@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/06 21:57:02 by hrecolet          #+#    #+#             */
-/*   Updated: 2022/07/06 22:14:07 by hrecolet         ###   ########.fr       */
+/*   Updated: 2022/07/06 22:32:50 by hrecolet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,7 @@
 template <typename T>
 class MutantStack : public std::stack<T> {
 	public:
-		typedef typename std::stack<T>::container_type container_type;
-		typedef typename container_type::iterator iterator;
+		typedef typename std::stack<T>::container_type::iterator iterator;
 		
 		iterator	begin(void) {
 			return (this->c.begin());
