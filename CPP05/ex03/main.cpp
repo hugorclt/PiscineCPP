@@ -6,7 +6,7 @@
 /*   By: hrecolet <hrecolet@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/27 12:01:04 by hrecolet          #+#    #+#             */
-/*   Updated: 2022/06/28 21:07:28 by hrecolet         ###   ########.fr       */
+/*   Updated: 2022/09/14 09:05:35 by hrecolet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,6 +77,7 @@ int	main(void)
 		paul.signForm(*form1);
 		std::cout << *form1;
 		paul.executeForm(*form1);
+		delete form1;
 	} catch (std::exception &e) {
 		std::cout << e.what() << std::endl;
 	}

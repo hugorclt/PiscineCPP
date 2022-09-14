@@ -6,7 +6,7 @@
 /*   By: hrecolet <hrecolet@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/27 12:01:04 by hrecolet          #+#    #+#             */
-/*   Updated: 2022/06/27 13:27:41 by hrecolet         ###   ########.fr       */
+/*   Updated: 2022/09/14 08:50:55 by hrecolet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,6 +59,9 @@ int	main(void)
 		paul.incrRank();
 		std::cout << paul;
 		paul.incrRank();
+		std::cout << paul;
+		paul.decrRank();
+		std::cout << paul;
 	} catch (std::exception &e) {
 		std::cout << e.what() << std::endl;
 	}

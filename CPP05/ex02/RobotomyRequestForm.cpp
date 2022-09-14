@@ -6,7 +6,7 @@
 /*   By: hrecolet <hrecolet@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/28 17:26:45 by hrecolet          #+#    #+#             */
-/*   Updated: 2022/06/28 20:57:19 by hrecolet         ###   ########.fr       */
+/*   Updated: 2022/09/14 09:01:12 by hrecolet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ void	RobotomyRequestForm::beExecuted(void)
 {
 	std::cout << this->target << " bzzzz bzzz bzz" << std::endl;
 	srand(time(0));
-	if ((rand() % 10) + 1 > 5)
+	if ((rand() % 2) == 1)
 		std::cout << "Success robotomisation" << std::endl;
 	else
 		std::cout << "Robotomisation failure" << std::endl;

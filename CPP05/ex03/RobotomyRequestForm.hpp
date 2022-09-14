@@ -6,13 +6,15 @@
 /*   By: hrecolet <hrecolet@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/28 17:19:29 by hrecolet          #+#    #+#             */
-/*   Updated: 2022/06/28 20:35:47 by hrecolet         ###   ########.fr       */
+/*   Updated: 2022/09/14 09:03:25 by hrecolet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
 #include "Form.hpp"
 #include <string>
+#include <ctime>
+#include <cstdlib>
 
 class RobotomyRequestForm : public Form {
 	private:
