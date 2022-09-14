@@ -6,15 +6,11 @@
 /*   By: hrecolet <hrecolet@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/26 20:18:21 by hrecolet          #+#    #+#             */
-/*   Updated: 2022/09/12 14:49:26 by hrecolet         ###   ########.fr       */
+/*   Updated: 2022/09/13 15:12:44 by hrecolet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Animal.hpp"
-
-/* -------------------------------------------------------------------------- */
-/*                                   Animal                                   */
-/* -------------------------------------------------------------------------- */
 
 Animal::Animal()
 {
@@ -24,6 +20,10 @@ Animal::Animal()
 Animal::Animal(Animal &to_cpy)
 {
 	*this = to_cpy;
+}
+
+Animal::Animal(std::string type) : type(type)
+{
 }
 
 Animal::~Animal()
@@ -42,7 +42,7 @@ Animal	&Animal::operator=(const Animal &to_assign)
 
 void	Animal::makeSound(void) const
 {
-	std::cout << "meuh im an animal yay" << std::endl;
+	std::cout << "undefined" << std::endl;
 }
 
 std::string	Animal::getType(void) const
@@ -55,82 +55,3 @@ void		Animal::setType(const std::string type)
 	this->type = type;
 }
 
-/* -------------------------------------------------------------------------- */
-/*                                     DOG                                    */
-/* -------------------------------------------------------------------------- */
-
-Dog::Dog()
-{
-	std::cout << "dog was created" << std::endl;
-	this->brain = new Brain();
-	this->type = "Dog";
-}
-
-Dog::Dog(Dog &to_cpy)
-{
-	this->brain = new Brain();
-	this->brain = to_cpy.brain;
-	this->type = to_cpy.type;
-}
-
-Dog::~Dog()
-{
-	std::cout << "dog destroyed" << std::endl;
-	delete this->brain;
-}
-
-//Operator
-
-Dog	&Dog::operator=(const Dog &to_assign)
-{
-	*this->brain = *(to_assign.brain);
-	this->type = to_assign.type;
-	return (*this);
-}
-
-//Function
-
-void	Dog::makeSound(void) const
-{
-	std::cout << "yes im barking now" << std::endl;
-}
-
-/* -------------------------------------------------------------------------- */
-/*                                     Cat                                    */
-/* -------------------------------------------------------------------------- */
-
-Cat::Cat()
-{
-	std::cout << "cat was created" << std::endl;
-	this->brain = new Brain();
-	this->type = "Cat";
-}
-
-Cat::Cat(Cat &to_cpy)
-{
-	this->brain = new Brain();
-	this->brain = to_cpy.brain;
-	this->type = to_cpy.type;
-}
-
-Cat::~Cat()
-{
-	std::cout << "cat destroyed" << std::endl;
-	delete this->brain;
-}
-
-//Operator
-
-Cat	&Cat::operator=(const Cat &to_assign)
-{
-	*this->brain = *(to_assign.brain);
-	this->type = to_assign.type;
-	return (*this);
-}
-
-//Function
-
-void	Cat::makeSound(void) const
-{
-	std::cout << "MiaouMiaouMiaou norminet is my rival" << std::endl;
-}

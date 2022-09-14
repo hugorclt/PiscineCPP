@@ -6,7 +6,7 @@
 /*   By: hrecolet <hrecolet@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/27 10:28:59 by hrecolet          #+#    #+#             */
-/*   Updated: 2022/09/12 14:50:57 by hrecolet         ###   ########.fr       */
+/*   Updated: 2022/09/13 14:48:10 by hrecolet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,6 +47,11 @@ int	main(void)
 
 	std::cout << animals[0]->getType() << std::endl;
 	std::cout << test.getType() << std::endl;
+
+	Dog basic;
+	{
+		Dog tmp = basic;
+	}
 	
 	for (int i = 0; i < 12; i++)
 		delete animals[i];

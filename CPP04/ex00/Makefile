@@ -6,11 +6,11 @@
 #    By: hrecolet <hrecolet@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/03/02 20:59:38 by hrecolet          #+#    #+#              #
-#    Updated: 2022/06/26 20:33:41 by hrecolet         ###   ########.fr        #
+#    Updated: 2022/09/13 15:13:02 by hrecolet         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRCS		=	main.cpp Animal.cpp WrongAnimal.cpp
+SRCS		=	main.cpp Animal.cpp WrongAnimal.cpp Cat.cpp Dog.cpp
 
 INCL		=	Animal.hpp WrongAnimal.hpp
 

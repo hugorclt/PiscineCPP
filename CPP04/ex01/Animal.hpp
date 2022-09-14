@@ -6,7 +6,7 @@
 /*   By: hrecolet <hrecolet@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/26 20:08:32 by hrecolet          #+#    #+#             */
-/*   Updated: 2022/09/12 09:30:46 by hrecolet         ###   ########.fr       */
+/*   Updated: 2022/09/14 08:33:37 by hrecolet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,7 @@ class Animal {
 	public:
 		virtual ~Animal();
 		Animal();
+		Animal(std::string type);
 		Animal(Animal &to_cpy);
 
 		//Operator
@@ -39,7 +40,7 @@ class Dog : public Animal {
 	public:
 		Dog();
 		Dog(Dog &to_cpy);
-		~Dog();
+		virtual ~Dog();
 
 		Dog	&operator=(const Dog &to_assign);
 
@@ -54,7 +55,7 @@ class Cat : public Animal {
 	public:
 		Cat();
 		Cat(Cat &to_cpy);
-		~Cat();
+		virtual ~Cat();
 
 		Cat	&operator=(const Cat &to_assign);
 

@@ -6,7 +6,7 @@
 /*   By: hrecolet <hrecolet@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/26 20:08:32 by hrecolet          #+#    #+#             */
-/*   Updated: 2022/09/10 16:31:26 by hrecolet         ###   ########.fr       */
+/*   Updated: 2022/09/13 15:08:31 by hrecolet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@ class Animal {
 	public:
 		Animal();
 		Animal(Animal &to_cpy);
+		Animal(std::string type);
 		virtual ~Animal();
 
 		//Operator

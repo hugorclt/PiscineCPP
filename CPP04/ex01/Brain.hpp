@@ -6,7 +6,7 @@
 /*   By: hrecolet <hrecolet@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/27 10:17:13 by hrecolet          #+#    #+#             */
-/*   Updated: 2022/09/12 09:25:20 by hrecolet         ###   ########.fr       */
+/*   Updated: 2022/09/13 15:02:14 by hrecolet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 
 class Brain {
 	private:
-		std::string	ideas[99];
+		std::string	ideas[100];
 
 	public:
 		Brain();

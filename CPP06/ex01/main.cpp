@@ -6,7 +6,7 @@
 /*   By: hrecolet <hrecolet@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/04 16:00:52 by hrecolet          #+#    #+#             */
-/*   Updated: 2022/07/04 21:42:50 by hrecolet         ###   ########.fr       */
+/*   Updated: 2022/09/13 17:24:39 by hrecolet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,5 +38,6 @@ int	main(void)
 	std::cout << "Serialized dataPTR: " << serialized_ptr << std::endl;
 	Data	*cpyOfData = deserialize (serialized_ptr);
 	std::cout << "Deserialized dataPTR: " << cpyOfData << std::endl;
+	
 	delete ptr;
 }

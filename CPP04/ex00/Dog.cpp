@@ -1,34 +1,43 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Dog.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hrecolet <hrecolet@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/06/27 10:28:59 by hrecolet          #+#    #+#             */
-/*   Updated: 2022/09/13 15:15:47 by hrecolet         ###   ########.fr       */
+/*   Created: 2022/09/13 15:07:36 by hrecolet          #+#    #+#             */
+/*   Updated: 2022/09/13 15:12:02 by hrecolet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Brain.hpp"
 #include "Animal.hpp"
 
-int main()
+Dog::Dog() : Animal("Dog")
 {
-	const Dog* dog = new Dog();
-	const Cat* cat = new Cat();
-	
-	std::cout << cat->getType() << " " << std::endl;
-	std::cout << dog->getType() << " " << std::endl;
-	
-	dog->makeSound();
-	cat->makeSound();
+	std::cout << "Dog was Created" << std::endl;
+}
 
-/*
-	Animal	*animal = new Animal();
-*/
+Dog::Dog(Dog &to_cpy) : Animal(to_cpy.type)
+{
+	std::cout << "Dog was Created" << std::endl;
+}
 
-	delete dog;
-	delete cat;
-	return 0;
+Dog::~Dog()
+{
+	std::cout << "Dog was Destroyed" << std::endl;
+}
+
+//Operator
+
+Dog	&Dog::operator=(const Dog &to_assign)
+{
+	this->type = to_assign.type;
+	return (*this);
+}
+
+//Function
+
+void	Dog::makeSound(void) const
+{
+	std::cout << "bark" << std::endl;
 }
