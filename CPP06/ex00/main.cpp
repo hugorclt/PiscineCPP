@@ -6,7 +6,7 @@
 /*   By: hrecolet <hrecolet@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/30 03:12:29 by hrecolet          #+#    #+#             */
-/*   Updated: 2022/07/04 15:57:10 by hrecolet         ###   ########.fr       */
+/*   Updated: 2022/09/14 07:43:48 by hrecolet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -117,7 +117,10 @@ void	printFloat(float nb)
 		std::cout << "char : '" << static_cast<char>(nb) << "'" << std::endl;
 	else
 		std::cout << "char : non printable" << std::endl;
-	std::cout << "integer : " << static_cast<int>(nb) << std::endl;
+	if (nb > 2147483647 || nb < -2147483648)
+		std::cout << "int : out of range" << std::endl;
+	else
+		std::cout << "integer : " << static_cast<int>(nb) << std::endl;
 	if (nb == static_cast<int>(nb))
 	{
 		std::cout << "float : " << nb << ".0f" << std::endl;
@@ -136,7 +139,10 @@ void	printDouble(float nb)
 		std::cout << "char : '" << static_cast<char>(nb) << "'" << std::endl;
 	else
 		std::cout << "char : non printable" << std::endl;
-	std::cout << "integer : " << static_cast<int>(nb) << std::endl;
+	if (nb > 2147483647 || nb < -2147483648)
+		std::cout << "int : out of range" << std::endl;
+	else
+		std::cout << "integer : " << static_cast<int>(nb) << std::endl;
 	if (nb == static_cast<int>(nb))
 	{
 		std::cout << "float : " << static_cast<float>(nb) << ".0f" << std::endl;
