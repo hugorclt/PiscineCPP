@@ -6,7 +6,7 @@
 /*   By: hrecolet <hrecolet@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/05 13:04:57 by hrecolet          #+#    #+#             */
-/*   Updated: 2022/07/05 13:43:56 by hrecolet         ###   ########.fr       */
+/*   Updated: 2022/09/15 23:04:33 by hrecolet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@
 #include "A.hpp"
 #include "B.hpp"
 #include "C.hpp"
+#include <cstdlib>
 
 Base	*generate(void)
 {	

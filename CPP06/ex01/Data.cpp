@@ -1,27 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   iter.hpp                                           :+:      :+:    :+:   */
+/*   Data.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hrecolet <hrecolet@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/05 13:48:57 by hrecolet          #+#    #+#             */
-/*   Updated: 2022/09/16 04:07:28 by hrecolet         ###   ########.fr       */
+/*   Created: 2022/09/15 22:57:44 by hrecolet          #+#    #+#             */
+/*   Updated: 2022/09/15 23:03:37 by hrecolet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#pragma once
-#include <cstddef>
-#include <iostream>
+#include "Data.hpp"
 
-template <typename T>
-void	iter(T array[], size_t len, void (function(T))) {
-	for (size_t i = 0; i < len; i++)
-		function(array[i]);
+Data::Data()
+{	
 }
 
-template <typename T>
-void	print(T elem)
+Data::Data(const Data &to_cpy)
 {
-	std::cout << elem << std::endl;
+	(void)to_cpy;
+}
+
+Data::~Data()
+{
+}
+
+Data	&Data::operator=(const Data& to_cpy)
+{
+	(void)to_cpy;
+	return (*this);
+}
+
+bool	Data::getHigss(void) const {
+	return (this->isHiggsBoson);
 }

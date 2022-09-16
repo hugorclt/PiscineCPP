@@ -6,7 +6,7 @@
 /*   By: hrecolet <hrecolet@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/05 15:43:33 by hrecolet          #+#    #+#             */
-/*   Updated: 2022/07/05 16:43:11 by hrecolet         ###   ########.fr       */
+/*   Updated: 2022/09/16 03:54:20 by hrecolet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,8 @@ class Array {
 		T				*array;
 		
 	public:
-		Array(const unsigned int n = 0);
+		Array();
+		Array(const unsigned int n);
 		Array(const Array &oth_instance);
 		~Array();
 		
@@ -41,13 +42,18 @@ class Array {
 };
 
 template <typename T>
+Array<T>::Array() : _size(0), array(NULL)
+{
+}
+
+template <typename T>
 Array<T>::Array(const unsigned int n) : _size(n), array(new T[n]())
 {
 }
 
 template <typename T>
 Array<T>::Array(const Array<T> &oth_instance) : _size(oth_instance._size), array(new T[oth_instance._size]) {
-	for (unsigned int i = 0; i < oth_instance.size; i++)
+	for (unsigned int i = 0; i < oth_instance.size(); i++)
 		this->array[i] = oth_instance.array[i];
 }
 

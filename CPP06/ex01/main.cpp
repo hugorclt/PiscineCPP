@@ -6,12 +6,13 @@
 /*   By: hrecolet <hrecolet@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/04 16:00:52 by hrecolet          #+#    #+#             */
-/*   Updated: 2022/09/13 17:24:39 by hrecolet         ###   ########.fr       */
+/*   Updated: 2022/09/15 23:02:12 by hrecolet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Data.hpp"
 #include <iostream>
+#include <stdint.h>
 
 uintptr_t	serialize(Data *ptr)
 {

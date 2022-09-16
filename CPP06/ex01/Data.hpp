@@ -6,7 +6,7 @@
 /*   By: hrecolet <hrecolet@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/04 15:58:37 by hrecolet          #+#    #+#             */
-/*   Updated: 2022/07/04 21:41:24 by hrecolet         ###   ########.fr       */
+/*   Updated: 2022/09/15 22:59:35 by hrecolet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,12 @@ class Data {
 		const static bool	isHiggsBoson = true;
 	
 	public:
-		bool getHigss(void) const {
-			return (this->isHiggsBoson);
-		}
+		Data();
+		Data(const Data &to_cpy);
+		~Data();
+
+		Data	&operator=(const Data &to_cpy);
+		
+		bool getHigss(void) const;
 };
 

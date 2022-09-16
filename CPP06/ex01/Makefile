@@ -6,11 +6,11 @@
 #    By: hrecolet <hrecolet@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/03/02 20:59:38 by hrecolet          #+#    #+#              #
-#    Updated: 2022/07/04 21:43:16 by hrecolet         ###   ########.fr        #
+#    Updated: 2022/09/15 23:00:25 by hrecolet         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRCS		=	main.cpp
+SRCS		=	main.cpp Data.cpp
 
 INCL		=	Data.hpp
 

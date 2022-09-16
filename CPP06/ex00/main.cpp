@@ -6,7 +6,7 @@
 /*   By: hrecolet <hrecolet@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/30 03:12:29 by hrecolet          #+#    #+#             */
-/*   Updated: 2022/09/14 07:43:48 by hrecolet         ###   ########.fr       */
+/*   Updated: 2022/09/15 23:30:47 by hrecolet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -102,22 +102,29 @@ void	printChar(const char *str)
 
 void	printInt(int nb)
 {
-	if (isprint(nb))
+	if (nb > 255 || nb < 0)
+		std::cout << "char : non printable" << std::endl;
+	else if (isprint(nb))
 		std::cout << "char : '" << static_cast<char>(nb) << "'" << std::endl;
 	else
 		std::cout << "char : non printable" << std::endl;
-	std::cout << "integer : " << nb << std::endl;
+	if (nb > 2147483647 || nb < -2147483648)
+		std::cout << "int : out of range" << std::endl;
+	else
+		std::cout << "integer : " << static_cast<int>(nb) << std::endl;
 	std::cout << "float : " << static_cast<float>(nb) << ".0f" << std::endl;
 	std::cout << "double : " << static_cast<double>(nb) << ".0" << std::endl;	 
 }
 
 void	printFloat(float nb)
 {
-	if (isprint(nb))
+	if (nb > 255 || nb < 0)
+		std::cout << "char : non printable" << std::endl;
+	else if (isprint(nb))
 		std::cout << "char : '" << static_cast<char>(nb) << "'" << std::endl;
 	else
 		std::cout << "char : non printable" << std::endl;
-	if (nb > 2147483647 || nb < -2147483648)
+	if (nb > 2147483647.0 || nb < -2147483648.0)
 		std::cout << "int : out of range" << std::endl;
 	else
 		std::cout << "integer : " << static_cast<int>(nb) << std::endl;
@@ -133,13 +140,15 @@ void	printFloat(float nb)
 	}
 }
 
-void	printDouble(float nb)
+void	printDouble(double nb)
 {
-	if (isprint(nb))
+	if (nb > 255 || nb < 0)
+		std::cout << "char : non printable" << std::endl;
+	else if (isprint(nb))
 		std::cout << "char : '" << static_cast<char>(nb) << "'" << std::endl;
 	else
 		std::cout << "char : non printable" << std::endl;
-	if (nb > 2147483647 || nb < -2147483648)
+	if (nb > 2147483647.0 || nb < -2147483648.0)
 		std::cout << "int : out of range" << std::endl;
 	else
 		std::cout << "integer : " << static_cast<int>(nb) << std::endl;
