@@ -118,10 +118,11 @@ class MyInt
 
 int main()
 {
-	MyInt int1(3);
-	MyInt int2(2);
+	MyInt int1(43);
+	MyInt int2(1);
 
 	std::cout << int1 + int2 << std::endl
+	// output: 42
 }
 ```
 now the **`+`** operator acts like the **`-`** operator. You can define in your class all the operator (**`>`**, **`<`**, **`<=`**, **`>=`**, **`!=`**, **`==`**, **`>>`**, **`<<`**, **`=`**, **`[]`**, **`*`**, ...)
@@ -190,9 +191,9 @@ int main()
 	Cat	felix();
 	Animals	thing();
 
-	felix.walk(); //"i'm walking!"
+	felix.walk(); //"i'm meowing!"
 	felix.getNumOfLegs(); //Works!
-	thing.walk(); //"i'm meowing"
+	thing.walk(); //"i'm walking"
 }
 ```
 
